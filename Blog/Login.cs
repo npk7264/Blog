@@ -23,7 +23,8 @@ namespace Blog
         private void btnLogin_Click(object sender, EventArgs e)
         {
             login_username = txbTenDangNhap.Texts;
-            Profile frm = new Profile();
+            //Profile frm = new Profile();
+            Home frm = new Home();
             frm.ShowDialog();
         }
 

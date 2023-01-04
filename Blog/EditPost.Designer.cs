@@ -98,6 +98,7 @@
             this.btnLuuThayDoi.Text = "Lưu thay đổi";
             this.btnLuuThayDoi.TextColor = System.Drawing.Color.White;
             this.btnLuuThayDoi.UseVisualStyleBackColor = false;
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
             // rtbStatus
             // 
@@ -159,6 +160,7 @@
             this.Controls.Add(this.pbAvatar);
             this.Name = "EditPost";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.EditPost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

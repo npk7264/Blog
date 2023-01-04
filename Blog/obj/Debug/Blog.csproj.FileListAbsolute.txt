@@ -15,3 +15,13 @@ D:\III\CS511\Blog\Blog\obj\Debug\Blog.Login.resources
 D:\III\CS511\Blog\Blog\obj\Debug\Blog.SignUp.resources
 D:\III\CS511\Blog\Blog\obj\Debug\Blog.NewPost.resources
 D:\III\CS511\Blog\Blog\obj\Debug\Blog.EditPost.resources
+D:\III\CS511\Blog\Blog\obj\Debug\Blog.Home.resources
+D:\III\CS511\Blog\Blog\bin\Debug\Interop.WMPLib.dll
+D:\III\CS511\Blog\Blog\bin\Debug\AxInterop.WMPLib.dll
+D:\III\CS511\Blog\Blog\obj\Debug\Interop.WMPLib.dll
+D:\III\CS511\Blog\Blog\obj\Debug\AxInterop.WMPLib.dll
+D:\III\CS511\Blog\Blog\obj\Debug\Blog.csproj.ResolveComReference.cache
+D:\III\CS511\Blog\Blog\obj\Debug\Blog.OtherProfile.resources
+D:\III\CS511\Blog\Blog\obj\Debug\Blog.Component.Comment.resources
+D:\III\CS511\Blog\Blog\obj\Debug\Blog.CommentList.resources
+D:\III\CS511\Blog\Blog\obj\Debug\Blog.Component.Img.resources

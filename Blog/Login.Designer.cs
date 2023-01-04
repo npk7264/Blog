@@ -124,12 +124,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 853);
+            this.ClientSize = new System.Drawing.Size(1380, 900);
             this.Controls.Add(this.btnNewAcc);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbMatKhau);
             this.Controls.Add(this.txbTenDangNhap);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
 

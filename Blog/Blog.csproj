@@ -65,6 +65,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentList.Designer.cs">
+      <DependentUpon>CommentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Img.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Img.Designer.cs">
+      <DependentUpon>Img.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\Post.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +96,12 @@
     <Compile Include="EditPost.Designer.cs">
       <DependentUpon>EditPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +113,12 @@
     </Compile>
     <Compile Include="NewPost.Designer.cs">
       <DependentUpon>NewPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherProfile.Designer.cs">
+      <DependentUpon>OtherProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
@@ -104,17 +134,32 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CommentList.resx">
+      <DependentUpon>CommentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Comment.resx">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Img.resx">
+      <DependentUpon>Img.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\Post.resx">
       <DependentUpon>Post.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPost.resx">
       <DependentUpon>EditPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewPost.resx">
       <DependentUpon>NewPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherProfile.resx">
+      <DependentUpon>OtherProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
@@ -127,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
@@ -155,6 +201,40 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-cmt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
