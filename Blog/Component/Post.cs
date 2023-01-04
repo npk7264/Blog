@@ -154,19 +154,17 @@ namespace Blog.Component
 
             // Load ảnh
             string thumucImg = Functions.GetFieldValues("select ThuMucAnh from BAIVIET where ID_BaiViet = N'" + ID_BaiViet + "'");
-
-            string[] files = Directory.GetFiles(thumucImg);
-            int count_img = files.Length;
-            if (count_img > 0)
+            // Kiểm tra thư mục có ảnh không
+            if (thumucImg != "noImg")
             {
+
+                string[] files = Directory.GetFiles(thumucImg);
                 foreach (string file in files)
                 {
-                    //string x = file.Replace("\\", "/");
                     Img img = new Img();
                     img.ImgPath = file;
                     flpnImage.Visible = true;
                     flpnImage.Controls.Add(img);
-                    //MessageBox.Show(file);
                 }
             }
 

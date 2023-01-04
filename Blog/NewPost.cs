@@ -27,9 +27,14 @@ namespace Blog
 
             rtbStatus.SaveFile(tenfile, RichTextBoxStreamType.RichText);
 
-            Functions.RunSQL("insert into BAIVIET " +
-                "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'" + tenthumuc + "')");
-
+            // có folder ảnh bài viết
+            if (Directory.Exists(tenthumuc))
+                Functions.RunSQL("insert into BAIVIET " +
+                    "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'" + tenthumuc + "')");
+            // bài viết không có ảnh
+            else
+                Functions.RunSQL("insert into BAIVIET " +
+                    "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'noImg')");
 
             this.Close();
         }
@@ -41,13 +46,6 @@ namespace Blog
             lbUser.Text = Login.login_username;
 
             this.Height = this.Height - flpnImage.Height;
-
-            // Tạo thư mục
-            if (!Directory.Exists(tenthumuc))
-            {
-                Directory.CreateDirectory(tenthumuc);
-                MessageBox.Show("Tạo thư mục thành công!");
-            }
         }
 
         // Tên thư mục ảnh
@@ -68,32 +66,19 @@ namespace Blog
                 img.ImgPath = file_path;
                 flpnImage.Controls.Add(img);
                 flpnImage.Visible = true;
+
+                // Tạo thư mục nếu chưa có thư mục ảnh
+                if (!Directory.Exists(tenthumuc))
+                {
+                    Directory.CreateDirectory(tenthumuc);
+                    MessageBox.Show("Tạo thư mục thành công!");
+                }
                 // Copy ảnh qua thư mục mới
                 File.Copy(file_path, tenthumuc + "/" + Path.GetFileName(file_path), true);
             }
 
             if (flpnImage.Controls.Count == 1)
                 this.Height = this.Height + flpnImage.Height;
-
-
-            //////////////
-            //SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //saveFileDialog.Filter = "mp3|*.mp3";
-            //bool flag = false;
-            //string destPath = "";
-            //if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    flag = true;
-            //    destPath = saveFileDialog.FileName;
-            //}
-            //if (flag)
-            //{
-            //    string sourceFile = axWindowsMediaPlayer1.URL;
-            //    string destFile = destPath;
-            //    File.Copy(sourceFile, destFile, true);
-            //    MessageBox.Show("Đã tải nhạc về máy");
-            //}
-            ///////////
         }
     }
 }
