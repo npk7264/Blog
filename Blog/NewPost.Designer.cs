@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPost));
             this.btnDangBai = new CustomControls.RJControls.RJButton();
             this.rtbStatus = new System.Windows.Forms.RichTextBox();
-            this.lbTime = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.rbCongKhai = new CustomControls.RJControls.RJRadioButton();
             this.rbRiengTu = new CustomControls.RJControls.RJRadioButton();
@@ -39,8 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pbAddImage = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +70,7 @@
             // rtbStatus
             // 
             this.rtbStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.rtbStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbStatus.Location = new System.Drawing.Point(20, 156);
             this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
@@ -79,21 +79,11 @@
             this.rtbStatus.TabIndex = 15;
             this.rtbStatus.Text = "";
             // 
-            // lbTime
-            // 
-            this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(101, 55);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(53, 20);
-            this.lbTime.TabIndex = 14;
-            this.lbTime.Text = "label2";
-            // 
             // lbUser
             // 
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(100, 15);
+            this.lbUser.Location = new System.Drawing.Point(100, 30);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(70, 25);
             this.lbUser.TabIndex = 13;
@@ -171,16 +161,6 @@
             this.panel2.Size = new System.Drawing.Size(800, 60);
             this.panel2.TabIndex = 22;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 25);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Thêm ảnh vào bài viết";
-            // 
             // pbAddImage
             // 
             this.pbAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAddImage.BackgroundImage")));
@@ -193,9 +173,19 @@
             this.pbAddImage.TabStop = false;
             this.pbAddImage.Click += new System.EventHandler(this.pbAddImage_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(225, 25);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Thêm ảnh vào bài viết";
+            // 
             // pbAvatar
             // 
-            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAvatar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.pbAvatar.BorderColor = System.Drawing.Color.White;
             this.pbAvatar.BorderColor2 = System.Drawing.Color.White;
@@ -221,7 +211,6 @@
             this.Controls.Add(this.rbRiengTu);
             this.Controls.Add(this.rbCongKhai);
             this.Controls.Add(this.rtbStatus);
-            this.Controls.Add(this.lbTime);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.pbAvatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -243,7 +232,6 @@
 
         private CustomControls.RJControls.RJButton btnDangBai;
         private System.Windows.Forms.RichTextBox rtbStatus;
-        private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbUser;
         private CustomControls.RJControls.RJCircularPictureBox pbAvatar;
         private CustomControls.RJControls.RJRadioButton rbCongKhai;

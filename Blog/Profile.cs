@@ -22,10 +22,13 @@ namespace Blog
         private void Profile_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
-            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
-            pbAvatarInStatus.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            
+            pbAvatarLogin.BackgroundImage = Image.FromFile("avatar/" + avt);
+            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
+            pbAvatarInStatus.BackgroundImage = Image.FromFile("avatar/" + avt);
             lbTen.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
             lbUsername.Text = Login.login_username;
+            lbCongViec.Text = Functions.GetFieldValues("select CongViec from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
             LoadPost();
         }
 
@@ -49,12 +52,7 @@ namespace Blog
 
         private void btnCapNhatThongTin_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "png|*.png";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pbAvatar.BackgroundImage = Image.FromFile(openFileDialog.FileName);
-            }
+            
         }
 
         private void lbStatus_Click(object sender, EventArgs e)
@@ -64,6 +62,26 @@ namespace Blog
             // Reload trang
             flowLayoutPanel1.Controls.Clear();
             LoadPost();
+        }
+
+        private void btnCapNhatAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select Picture";
+            openFileDialog.Filter = "JPEG Image|*.jpg|PNG Image|*.png|All Files|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string file_path = openFileDialog.FileName;
+                File.Copy(file_path, "avatar/" + Path.GetFileName(file_path), true);
+
+                pbAvatar.BackgroundImage = Image.FromFile(file_path);
+
+                Functions.RunSQL("update TAIKHOAN set Avatar = N'" + Path.GetFileName(file_path) + "' where TenDangNhap = N'" + Login.login_username + "'");
+                this.Close();
+                Profile frm = new Profile();
+                frm.ShowDialog();
+            }
         }
     }
 }

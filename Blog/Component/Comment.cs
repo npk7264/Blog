@@ -38,7 +38,7 @@ namespace Blog.Component
                 "where TenDangNhapComment = N'" + this.Username + "' and ThoiGianComment = '" + this.Time + "'");
 
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + this.Username + "'");
-            pbAvtComment.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            pbAvtComment.BackgroundImage = Image.FromFile("avatar/" + avt);
             lbComment.Text = Functions.GetFieldValues("select ContentComment from COMMENT where ID_Comment = N'" + ID_Comment + "'");
         }
     }

@@ -23,7 +23,7 @@ namespace Blog
         private void CommentList_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
-            pbAvatarComment.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            pbAvatarComment.BackgroundImage = Image.FromFile("avatar/" + avt);
 
             List<string> comments = Functions.GetFieldValuesList("select ID_Comment from COMMENT where ID_BaiViet = N'" + baiviet_comment + "' order by ThoiGianComment desc");
             foreach(string comment in comments)

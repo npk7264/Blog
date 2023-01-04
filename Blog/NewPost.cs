@@ -42,7 +42,7 @@ namespace Blog
         private void NewPost_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
-            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
             lbUser.Text = Login.login_username;
 
             this.Height = this.Height - flpnImage.Height;

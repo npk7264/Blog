@@ -23,10 +23,11 @@ namespace Blog
         private void OtherProfile_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + other_username + "'");
-            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
             
             lbTen.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + other_username + "'");
             lbUsername.Text = other_username;
+            lbCongViec.Text = Functions.GetFieldValues("select CongViec from TAIKHOAN where TenDangNhap = N'" + other_username + "'");
             LoadPost();
         }
 
@@ -49,6 +50,12 @@ namespace Blog
                     flowLayoutPanel1.Controls.Add(post);
                 }
             }
+        }
+
+        private void pbAvatarLogin_Click(object sender, EventArgs e)
+        {
+            Profile frm = new Profile();
+            frm.ShowDialog();
         }
     }
 }

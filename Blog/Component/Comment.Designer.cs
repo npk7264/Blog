@@ -68,20 +68,20 @@
             this.rjPanel1.Controls.Add(this.lbComment);
             this.rjPanel1.ForeColor = System.Drawing.Color.Black;
             this.rjPanel1.GradientAngle = 90F;
-            this.rjPanel1.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.rjPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.rjPanel1.Location = new System.Drawing.Point(75, 0);
+            this.rjPanel1.GradientBottomColor = System.Drawing.Color.White;
+            this.rjPanel1.GradientTopColor = System.Drawing.Color.White;
+            this.rjPanel1.Location = new System.Drawing.Point(75, 2);
             this.rjPanel1.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(707, 80);
+            this.rjPanel1.Size = new System.Drawing.Size(899, 80);
             this.rjPanel1.TabIndex = 4;
             // 
             // pbAvtComment
             // 
             this.pbAvtComment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAvtComment.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbAvtComment.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.pbAvtComment.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbAvtComment.BorderColor = System.Drawing.Color.White;
+            this.pbAvtComment.BorderColor2 = System.Drawing.Color.White;
             this.pbAvtComment.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.pbAvtComment.BorderSize = 2;
             this.pbAvtComment.GradientAngle = 50F;
@@ -115,7 +115,7 @@
             this.Controls.Add(this.pbAvtComment);
             this.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.Name = "Comment";
-            this.Size = new System.Drawing.Size(786, 110);
+            this.Size = new System.Drawing.Size(980, 110);
             this.Load += new System.EventHandler(this.Comment_Load);
             this.rjPanel1.ResumeLayout(false);
             this.rjPanel1.PerformLayout();

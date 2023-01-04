@@ -27,7 +27,7 @@ namespace Blog
                 string sql = "insert into TAIKHOAN values (" +
                     "N'" + txbTenDangNhap.Texts +
                     "', N'" + txbMatKhau.Texts +
-                    "', N'" + txbHo.Texts + txbTen.Texts + "')";
+                    "', N'" + txbHo.Texts + txbTen.Texts + "', N'default')";
                 Functions.RunSQL(sql);
                 MessageBox.Show("Đăng ký tài khoản thành công");
             }

@@ -22,8 +22,8 @@ namespace Blog
         private void Home_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
-            pbAvatarLogin.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
-            pbAvatarInStatus.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            pbAvatarLogin.BackgroundImage = Image.FromFile("avatar/" + avt);
+            pbAvatarInStatus.BackgroundImage = Image.FromFile("avatar/" + avt);
             LoadPost();
         }
 
@@ -56,6 +56,12 @@ namespace Blog
             // Reload trang
             flowLayoutPanel1.Controls.Clear();
             LoadPost();
+        }
+
+        private void pbAvatarLogin_Click(object sender, EventArgs e)
+        {
+            Profile frm = new Profile();
+            frm.ShowDialog();
         }
     }
 }

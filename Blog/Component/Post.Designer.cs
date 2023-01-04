@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Post));
             this.lbUser = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.rtbStatus = new System.Windows.Forms.RichTextBox();
@@ -36,16 +37,18 @@
             this.btnChinhSua = new CustomControls.RJControls.RJButton();
             this.pnSetting0 = new CustomControls.RJControls.RJPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pic_likeCount = new System.Windows.Forms.PictureBox();
             this.lbSoComment = new System.Windows.Forms.Label();
             this.lbSoLike = new System.Windows.Forms.Label();
-            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
             this.pbLuu = new System.Windows.Forms.PictureBox();
             this.pbComment = new System.Windows.Forms.PictureBox();
             this.pbLike = new System.Windows.Forms.PictureBox();
+            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
             this.pbSetting = new System.Windows.Forms.PictureBox();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.pnSetting1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLuu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLike)).BeginInit();
@@ -79,6 +82,7 @@
             // 
             this.rtbStatus.BackColor = System.Drawing.Color.White;
             this.rtbStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbStatus.Cursor = System.Windows.Forms.Cursors.Default;
             this.rtbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbStatus.Location = new System.Drawing.Point(20, 100);
             this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
@@ -97,11 +101,11 @@
             this.pnSetting1.Controls.Add(this.btnChinhSua);
             this.pnSetting1.ForeColor = System.Drawing.Color.Black;
             this.pnSetting1.GradientAngle = 90F;
-            this.pnSetting1.GradientBottomColor = System.Drawing.Color.CadetBlue;
-            this.pnSetting1.GradientTopColor = System.Drawing.Color.DodgerBlue;
+            this.pnSetting1.GradientBottomColor = System.Drawing.Color.LightSteelBlue;
+            this.pnSetting1.GradientTopColor = System.Drawing.Color.LightSteelBlue;
             this.pnSetting1.Location = new System.Drawing.Point(509, 24);
             this.pnSetting1.Name = "pnSetting1";
-            this.pnSetting1.Size = new System.Drawing.Size(217, 99);
+            this.pnSetting1.Size = new System.Drawing.Size(217, 92);
             this.pnSetting1.TabIndex = 8;
             this.pnSetting1.Visible = false;
             // 
@@ -114,13 +118,15 @@
             this.btnXoa.BorderSize = 0;
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(60, 49);
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
+            this.btnXoa.Location = new System.Drawing.Point(16, 46);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(150, 40);
+            this.btnXoa.Size = new System.Drawing.Size(184, 40);
             this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "rjButton2";
-            this.btnXoa.TextColor = System.Drawing.Color.White;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextColor = System.Drawing.Color.Black;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -133,13 +139,15 @@
             this.btnChinhSua.BorderSize = 0;
             this.btnChinhSua.FlatAppearance.BorderSize = 0;
             this.btnChinhSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChinhSua.ForeColor = System.Drawing.Color.White;
-            this.btnChinhSua.Location = new System.Drawing.Point(60, 3);
+            this.btnChinhSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.ForeColor = System.Drawing.Color.Black;
+            this.btnChinhSua.Location = new System.Drawing.Point(16, 6);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(150, 40);
+            this.btnChinhSua.Size = new System.Drawing.Size(184, 40);
             this.btnChinhSua.TabIndex = 0;
-            this.btnChinhSua.Text = "rjButton1";
-            this.btnChinhSua.TextColor = System.Drawing.Color.White;
+            this.btnChinhSua.Text = "Chỉnh sửa";
+            this.btnChinhSua.TextColor = System.Drawing.Color.Black;
             this.btnChinhSua.UseVisualStyleBackColor = false;
             this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
@@ -149,16 +157,17 @@
             this.pnSetting0.BorderRadius = 30;
             this.pnSetting0.ForeColor = System.Drawing.Color.Black;
             this.pnSetting0.GradientAngle = 90F;
-            this.pnSetting0.GradientBottomColor = System.Drawing.Color.CadetBlue;
-            this.pnSetting0.GradientTopColor = System.Drawing.Color.DodgerBlue;
+            this.pnSetting0.GradientBottomColor = System.Drawing.Color.LightSteelBlue;
+            this.pnSetting0.GradientTopColor = System.Drawing.Color.LightSteelBlue;
             this.pnSetting0.Location = new System.Drawing.Point(509, 24);
             this.pnSetting0.Name = "pnSetting0";
-            this.pnSetting0.Size = new System.Drawing.Size(217, 99);
+            this.pnSetting0.Size = new System.Drawing.Size(217, 92);
             this.pnSetting0.TabIndex = 9;
             this.pnSetting0.Visible = false;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pic_likeCount);
             this.panel1.Controls.Add(this.lbSoComment);
             this.panel1.Controls.Add(this.lbSoLike);
             this.panel1.Controls.Add(this.pbLuu);
@@ -171,11 +180,22 @@
             this.panel1.Size = new System.Drawing.Size(792, 136);
             this.panel1.TabIndex = 10;
             // 
+            // pic_likeCount
+            // 
+            this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
+            this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_likeCount.Location = new System.Drawing.Point(22, 11);
+            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_likeCount.Name = "pic_likeCount";
+            this.pic_likeCount.Size = new System.Drawing.Size(38, 38);
+            this.pic_likeCount.TabIndex = 17;
+            this.pic_likeCount.TabStop = false;
+            // 
             // lbSoComment
             // 
             this.lbSoComment.AutoSize = true;
             this.lbSoComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoComment.Location = new System.Drawing.Point(640, 11);
+            this.lbSoComment.Location = new System.Drawing.Point(640, 18);
             this.lbSoComment.Name = "lbSoComment";
             this.lbSoComment.Size = new System.Drawing.Size(135, 25);
             this.lbSoComment.TabIndex = 16;
@@ -185,22 +205,12 @@
             // 
             this.lbSoLike.AutoSize = true;
             this.lbSoLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLike.Location = new System.Drawing.Point(17, 11);
+            this.lbSoLike.Location = new System.Drawing.Point(70, 18);
             this.lbSoLike.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.lbSoLike.Name = "lbSoLike";
             this.lbSoLike.Size = new System.Drawing.Size(84, 25);
             this.lbSoLike.TabIndex = 15;
             this.lbSoLike.Text = "Lượt like";
-            // 
-            // flpnImage
-            // 
-            this.flpnImage.BackColor = System.Drawing.Color.White;
-            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpnImage.Location = new System.Drawing.Point(0, 280);
-            this.flpnImage.Name = "flpnImage";
-            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.flpnImage.Size = new System.Drawing.Size(792, 185);
-            this.flpnImage.TabIndex = 11;
             // 
             // pbLuu
             // 
@@ -214,6 +224,7 @@
             this.pbLuu.Size = new System.Drawing.Size(60, 60);
             this.pbLuu.TabIndex = 14;
             this.pbLuu.TabStop = false;
+            this.pbLuu.Click += new System.EventHandler(this.pbLuu_Click);
             // 
             // pbComment
             // 
@@ -243,6 +254,16 @@
             this.pbLike.TabStop = false;
             this.pbLike.Click += new System.EventHandler(this.pbLike_Click);
             // 
+            // flpnImage
+            // 
+            this.flpnImage.BackColor = System.Drawing.Color.White;
+            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpnImage.Location = new System.Drawing.Point(0, 278);
+            this.flpnImage.Name = "flpnImage";
+            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.flpnImage.Size = new System.Drawing.Size(792, 187);
+            this.flpnImage.TabIndex = 11;
+            // 
             // pbSetting
             // 
             this.pbSetting.BackColor = System.Drawing.Color.Transparent;
@@ -260,7 +281,7 @@
             // pbAvatar
             // 
             this.pbAvatar.BackColor = System.Drawing.Color.Silver;
-            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAvatar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.pbAvatar.BorderColor = System.Drawing.Color.White;
             this.pbAvatar.BorderColor2 = System.Drawing.Color.White;
@@ -297,6 +318,7 @@
             this.pnSetting1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLuu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLike)).EndInit();
@@ -325,5 +347,6 @@
         private System.Windows.Forms.PictureBox pbComment;
         private System.Windows.Forms.PictureBox pbLike;
         private System.Windows.Forms.FlowLayoutPanel flpnImage;
+        private System.Windows.Forms.PictureBox pic_likeCount;
     }
 }

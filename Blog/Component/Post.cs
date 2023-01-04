@@ -119,21 +119,22 @@ namespace Blog.Component
         {
             Control temp = this.Parent;
             temp.Controls.Remove(this);
+            // Xóa bài viết
             Functions.RunSQL("delete from BAIVIET where " +
                 "TenDangNhap = N'" + Login.login_username + "' and ThoiGianDang = '" + lbTime.Text + "'");
+
             pnSetting1.Visible = false;
         }
 
+        // Hiển thị khi mở bài viết
         private void Post_Load(object sender, EventArgs e)
         {
-
-
             string ID_BaiViet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET " +
                 "where TenDangNhap = N'" + this.Username + "' and ThoiGianDang = '" + this.Time + "'");
 
             // Ảnh đại diện
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + this.Username + "'");
-            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt + ".jpg");
+            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
 
             // Nội dung bài viết
             rtbStatus.LoadFile("PostFolder/" + ID_BaiViet + ".rtf", RichTextBoxStreamType.RichText);
@@ -187,6 +188,14 @@ namespace Blog.Component
             else
                 pbLike.BackgroundImage = Image.FromFile("picture/icon-liked.png");
 
+            // Hiển thị trạng thái lưu
+            string check_save = Functions.GetFieldValues(
+                    "select COUNT(*) from LUU where ID_BaiViet = N'" + ID_BaiViet + "' and TenDangNhapLuu = N'" + Login.login_username + "'");
+            if (check_save == "0")
+                pbLuu.BackgroundImage = Image.FromFile("picture/icon-save.png");
+            else
+                pbLuu.BackgroundImage = Image.FromFile("picture/icon-saved.png");
+
             // Lượt like
             lbSoLike.Text = Functions.GetFieldValues("select COUNT(*) from YEUTHICH " +
                 "where ID_BaiViet = N'" + ID_BaiViet + "'") + " thích";
@@ -195,6 +204,7 @@ namespace Blog.Component
                 "where ID_BaiViet = N'" + ID_BaiViet + "'") + " bình luận";
         }
 
+        // Comment
         private void pbComment_Click(object sender, EventArgs e)
         {
             string ID_BaiViet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET " +
@@ -207,6 +217,7 @@ namespace Blog.Component
                 "where ID_BaiViet = N'" + ID_BaiViet + "'") + " bình luận";
         }
 
+        // Like
         private void pbLike_Click(object sender, EventArgs e)
         {
             string ID_BaiViet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET " +
@@ -229,6 +240,29 @@ namespace Blog.Component
                 pbLike.BackgroundImage = Image.FromFile("picture/icon-like.png");
             }
             lbSoLike.Text = Functions.GetFieldValues("select COUNT(*) from YEUTHICH where ID_BaiViet = N'" + ID_BaiViet + "'") + " thích";
+        }
+
+        private void pbLuu_Click(object sender, EventArgs e)
+        {
+            string ID_BaiViet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET " +
+                "where TenDangNhap = N'" + this.Username + "' and ThoiGianDang = '" + this.Time + "'");
+
+            string count = Functions.GetFieldValues("select COUNT(*) from LUU " +
+                "where ID_BaiViet=N'" + ID_BaiViet + "' and TenDangNhapLuu = N'" + Login.login_username + "'");
+
+            if (count == "0")
+            {
+                string sql = "insert into LUU values (N'" + ID_BaiViet + "', N'" + Login.login_username + "')";
+                Functions.RunSQL(sql);
+                pbLuu.BackgroundImage = Image.FromFile("picture/icon-saved.png");
+            }
+            else
+            {
+                string sql = "delete from LUU where " +
+                    "ID_BaiViet = N'" + ID_BaiViet + "' and TenDangNhapLuu = N'" + Login.login_username + "'";
+                Functions.RunSQL(sql);
+                pbLuu.BackgroundImage = Image.FromFile("picture/icon-save.png");
+            }
         }
     }
 }

@@ -36,6 +36,9 @@
             this.pbIconSearch = new System.Windows.Forms.PictureBox();
             this.pbAvatarLogin = new CustomControls.RJControls.RJCircularPictureBox();
             this.txtSearch = new CustomControls.RJControls.RJTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbCongViec = new System.Windows.Forms.Label();
+            this.btnCapNhatAvatar = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).BeginInit();
@@ -46,7 +49,7 @@
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(536, 304);
+            this.lbUsername.Location = new System.Drawing.Point(579, 182);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(79, 29);
             this.lbUsername.TabIndex = 10;
@@ -56,7 +59,7 @@
             // 
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTen.Location = new System.Drawing.Point(535, 166);
+            this.lbTen.Location = new System.Drawing.Point(535, 136);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(98, 32);
             this.lbTen.TabIndex = 9;
@@ -105,7 +108,7 @@
             this.pbIconSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             this.pbIconSearch.BackgroundImage = global::Blog.Properties.Resources.icon_search;
             this.pbIconSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbIconSearch.Location = new System.Drawing.Point(1026, 32);
+            this.pbIconSearch.Location = new System.Drawing.Point(1019, 32);
             this.pbIconSearch.Name = "pbIconSearch";
             this.pbIconSearch.Size = new System.Drawing.Size(36, 36);
             this.pbIconSearch.TabIndex = 3;
@@ -120,6 +123,7 @@
             this.pbAvatarLogin.BorderColor2 = System.Drawing.Color.Transparent;
             this.pbAvatarLogin.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.pbAvatarLogin.BorderSize = 2;
+            this.pbAvatarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAvatarLogin.GradientAngle = 50F;
             this.pbAvatarLogin.Location = new System.Drawing.Point(1271, 12);
             this.pbAvatarLogin.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
@@ -128,6 +132,7 @@
             this.pbAvatarLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvatarLogin.TabIndex = 1;
             this.pbAvatarLogin.TabStop = false;
+            this.pbAvatarLogin.Click += new System.EventHandler(this.pbAvatarLogin_Click);
             // 
             // txtSearch
             // 
@@ -147,16 +152,58 @@
             this.txtSearch.PasswordChar = false;
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSearch.PlaceholderText = "";
-            this.txtSearch.Size = new System.Drawing.Size(800, 60);
+            this.txtSearch.Size = new System.Drawing.Size(792, 60);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.Texts = "Tìm kiếm tài khoản";
             this.txtSearch.UnderlinedStyle = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(536, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 29);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "@";
+            // 
+            // lbCongViec
+            // 
+            this.lbCongViec.AutoSize = true;
+            this.lbCongViec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCongViec.Location = new System.Drawing.Point(536, 235);
+            this.lbCongViec.Name = "lbCongViec";
+            this.lbCongViec.Size = new System.Drawing.Size(155, 29);
+            this.lbCongViec.TabIndex = 13;
+            this.lbCongViec.Text = "Lập trình viên";
+            // 
+            // btnCapNhatAvatar
+            // 
+            this.btnCapNhatAvatar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCapNhatAvatar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCapNhatAvatar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCapNhatAvatar.BorderRadius = 10;
+            this.btnCapNhatAvatar.BorderSize = 0;
+            this.btnCapNhatAvatar.FlatAppearance.BorderSize = 0;
+            this.btnCapNhatAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhatAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatAvatar.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhatAvatar.Location = new System.Drawing.Point(541, 287);
+            this.btnCapNhatAvatar.Name = "btnCapNhatAvatar";
+            this.btnCapNhatAvatar.Size = new System.Drawing.Size(250, 57);
+            this.btnCapNhatAvatar.TabIndex = 14;
+            this.btnCapNhatAvatar.Text = "Cập nhật ảnh đại diện";
+            this.btnCapNhatAvatar.TextColor = System.Drawing.Color.White;
+            this.btnCapNhatAvatar.UseVisualStyleBackColor = false;
             // 
             // OtherProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1380, 900);
+            this.Controls.Add(this.btnCapNhatAvatar);
+            this.Controls.Add(this.lbCongViec);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.lbTen);
@@ -185,5 +232,8 @@
         private System.Windows.Forms.PictureBox pbIconSearch;
         private CustomControls.RJControls.RJCircularPictureBox pbAvatarLogin;
         private CustomControls.RJControls.RJTextBox txtSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCongViec;
+        private CustomControls.RJControls.RJButton btnCapNhatAvatar;
     }
 }
