@@ -34,6 +34,7 @@
             this.pbAvatarComment = new CustomControls.RJControls.RJCircularPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbAvatarLogin = new CustomControls.RJControls.RJCircularPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarComment)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).BeginInit();
@@ -110,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pbAvatarLogin);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -135,6 +137,16 @@
             this.pbAvatarLogin.TabIndex = 1;
             this.pbAvatarLogin.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(545, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(290, 32);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Bình luận về bài viết";
+            // 
             // CommentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,6 +165,7 @@
             this.Load += new System.EventHandler(this.CommentList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarComment)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).EndInit();
             this.ResumeLayout(false);
 
@@ -166,5 +179,6 @@
         private CustomControls.RJControls.RJButton btnDangBinhLuan;
         private System.Windows.Forms.Panel panel1;
         private CustomControls.RJControls.RJCircularPictureBox pbAvatarLogin;
+        private System.Windows.Forms.Label label1;
     }
 }

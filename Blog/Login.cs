@@ -22,10 +22,17 @@ namespace Blog
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            login_username = txbTenDangNhap.Texts;
-            //Profile frm = new Profile();
-            Home frm = new Home();
-            frm.ShowDialog();
+            string username = txbTenDangNhap.Texts;
+            string password = txbMatKhau.Texts;
+            string check_user = Functions.GetFieldValues("select COUNT(*) from TAIKHOAN where TenDangNhap = N'" + username + "' and MatKhau = N'" + password + "'");
+            if (check_user != "0")
+            {
+                login_username = txbTenDangNhap.Texts;
+                Home frm = new Home();
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Vui lòng nhập đúng tên tài khoản và mật khẩu!");
         }
 
         private void btnNewAcc_Click(object sender, EventArgs e)

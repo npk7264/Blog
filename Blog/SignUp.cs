@@ -27,13 +27,14 @@ namespace Blog
                 string sql = "insert into TAIKHOAN values (" +
                     "N'" + txbTenDangNhap.Texts +
                     "', N'" + txbMatKhau.Texts +
-                    "', N'" + txbHo.Texts + txbTen.Texts + "', N'default')";
+                    "', N'" + txbHo.Texts + txbTen.Texts + 
+                    "', N'default.jpg', N'" + txbCongViec.Texts + "')";
                 Functions.RunSQL(sql);
                 MessageBox.Show("Đăng ký tài khoản thành công");
             }
             else
             {
-                MessageBox.Show("ok");
+                MessageBox.Show("Tên tài khoản đã được đăng ký, vui lòng đăng ký tên tài khoản khác!");
             }
         }
 

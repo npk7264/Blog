@@ -33,6 +33,7 @@
             this.txbTenDangNhap = new CustomControls.RJControls.RJTextBox();
             this.txbMatKhau = new CustomControls.RJControls.RJTextBox();
             this.btnSignUp = new CustomControls.RJControls.RJButton();
+            this.txbCongViec = new CustomControls.RJControls.RJTextBox();
             this.SuspendLayout();
             // 
             // txbHo
@@ -134,7 +135,7 @@
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(50, 247);
+            this.btnSignUp.Location = new System.Drawing.Point(50, 330);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Padding = new System.Windows.Forms.Padding(10);
             this.btnSignUp.Size = new System.Drawing.Size(460, 60);
@@ -144,11 +145,34 @@
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
+            // txbCongViec
+            // 
+            this.txbCongViec.BackColor = System.Drawing.SystemColors.Window;
+            this.txbCongViec.BorderColor = System.Drawing.Color.Black;
+            this.txbCongViec.BorderFocusColor = System.Drawing.Color.RoyalBlue;
+            this.txbCongViec.BorderRadius = 10;
+            this.txbCongViec.BorderSize = 1;
+            this.txbCongViec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCongViec.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txbCongViec.Location = new System.Drawing.Point(50, 248);
+            this.txbCongViec.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCongViec.Multiline = false;
+            this.txbCongViec.Name = "txbCongViec";
+            this.txbCongViec.Padding = new System.Windows.Forms.Padding(15);
+            this.txbCongViec.PasswordChar = false;
+            this.txbCongViec.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txbCongViec.PlaceholderText = "";
+            this.txbCongViec.Size = new System.Drawing.Size(460, 56);
+            this.txbCongViec.TabIndex = 6;
+            this.txbCongViec.Texts = "Công việc";
+            this.txbCongViec.UnderlinedStyle = false;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 450);
+            this.Controls.Add(this.txbCongViec);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txbMatKhau);
             this.Controls.Add(this.txbTenDangNhap);
@@ -167,5 +191,6 @@
         private CustomControls.RJControls.RJTextBox txbTenDangNhap;
         private CustomControls.RJControls.RJTextBox txbMatKhau;
         private CustomControls.RJControls.RJButton btnSignUp;
+        private CustomControls.RJControls.RJTextBox txbCongViec;
     }
 }
