@@ -245,5 +245,17 @@
   <ItemGroup>
     <None Include="bin\Debug\picture\icon-search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-homeClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-personClick.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
