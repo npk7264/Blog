@@ -89,6 +89,12 @@
     <Compile Include="Component\Post.Designer.cs">
       <DependentUpon>Post.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\searchUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\searchUser.Designer.cs">
+      <DependentUpon>searchUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="EditPost.cs">
       <SubType>Form</SubType>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Post.resx">
       <DependentUpon>Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\searchUser.resx">
+      <DependentUpon>searchUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPost.resx">
       <DependentUpon>EditPost.cs</DependentUpon>
