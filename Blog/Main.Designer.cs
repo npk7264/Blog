@@ -31,19 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pic_profile = new System.Windows.Forms.PictureBox();
             this.pic_home = new System.Windows.Forms.PictureBox();
             this.pbIconSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new CustomControls.RJControls.RJTextBox();
             this.pbAvatarLogin = new CustomControls.RJControls.RJCircularPictureBox();
-            this.pnMain = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.danhSáchYêuThíchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchĐãLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchĐãBìnhLuậnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).BeginInit();
@@ -53,7 +51,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pic_profile);
             this.panel1.Controls.Add(this.pic_home);
             this.panel1.Controls.Add(this.pbIconSearch);
             this.panel1.Controls.Add(this.txtSearch);
@@ -63,15 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 81);
             this.panel1.TabIndex = 6;
-            // 
-            // pic_profile
-            // 
-            this.pic_profile.Location = new System.Drawing.Point(782, 12);
-            this.pic_profile.Name = "pic_profile";
-            this.pic_profile.Size = new System.Drawing.Size(50, 50);
-            this.pic_profile.TabIndex = 6;
-            this.pic_profile.TabStop = false;
-            this.pic_profile.Click += new System.EventHandler(this.pic_profile_Click);
             // 
             // pic_home
             // 
@@ -136,14 +124,7 @@
             this.pbAvatarLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvatarLogin.TabIndex = 1;
             this.pbAvatarLogin.TabStop = false;
-            // 
-            // pnMain
-            // 
-            this.pnMain.Location = new System.Drawing.Point(0, 81);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1035, 650);
-            this.pnMain.TabIndex = 7;
+            this.pbAvatarLogin.Click += new System.EventHandler(this.pbAvatarLogin_Click);
             // 
             // contextMenuStrip1
             // 
@@ -153,7 +134,7 @@
             this.danhSáchĐãBìnhLuậnToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(199, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(199, 92);
             // 
             // danhSáchYêuThíchToolStripMenuItem
             // 
@@ -181,6 +162,14 @@
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
+            // pnMain
+            // 
+            this.pnMain.Location = new System.Drawing.Point(0, 81);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(1035, 650);
+            this.pnMain.TabIndex = 7;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,7 +184,6 @@
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).EndInit();
@@ -212,7 +200,6 @@
         private CustomControls.RJControls.RJCircularPictureBox pbAvatarLogin;
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.PictureBox pic_home;
-        private System.Windows.Forms.PictureBox pic_profile;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem danhSáchYêuThíchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhSáchĐãLưuToolStripMenuItem;
