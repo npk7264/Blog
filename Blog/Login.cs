@@ -28,7 +28,7 @@ namespace Blog
             if (check_user != "0")
             {
                 login_username = txbTenDangNhap.Texts;
-                Home frm = new Home();
+                Main frm = new Main();
                 frm.ShowDialog();
             }
             else

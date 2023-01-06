@@ -23,7 +23,6 @@ namespace Blog
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
             
-            pbAvatarLogin.BackgroundImage = Image.FromFile("avatar/" + avt);
             pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
             pbAvatarInStatus.BackgroundImage = Image.FromFile("avatar/" + avt);
             lbTen.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
@@ -78,9 +77,13 @@ namespace Blog
                 pbAvatar.BackgroundImage = Image.FromFile(file_path);
 
                 Functions.RunSQL("update TAIKHOAN set Avatar = N'" + Path.GetFileName(file_path) + "' where TenDangNhap = N'" + Login.login_username + "'");
-                this.Close();
-                Profile frm = new Profile();
-                frm.ShowDialog();
+
+                // Reload trang
+                Profile profile = new Profile();
+                profile.TopLevel = false;
+                Main.pnMainParent.Controls.Clear();
+                Main.pnMainParent.Controls.Add(profile);
+                profile.Show();
             }
         }
     }

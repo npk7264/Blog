@@ -37,10 +37,6 @@
             this.rjPanel2 = new CustomControls.RJControls.RJPanel();
             this.lbStatus = new System.Windows.Forms.Label();
             this.pbAvatarInStatus = new CustomControls.RJControls.RJCircularPictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pbIconSearch = new System.Windows.Forms.PictureBox();
-            this.pbAvatarLogin = new CustomControls.RJControls.RJCircularPictureBox();
-            this.txtSearch = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCapNhatAvatar = new CustomControls.RJControls.RJButton();
             this.lbCongViec = new System.Windows.Forms.Label();
@@ -48,15 +44,12 @@
             this.rjPanel1.SuspendLayout();
             this.rjPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarInStatus)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(272, 511);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(272, 411);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 0, 10, 10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1071, 349);
@@ -66,7 +59,7 @@
             // 
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTen.Location = new System.Drawing.Point(535, 136);
+            this.lbTen.Location = new System.Drawing.Point(535, 36);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(98, 32);
             this.lbTen.TabIndex = 3;
@@ -76,7 +69,7 @@
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(579, 182);
+            this.lbUsername.Location = new System.Drawing.Point(579, 82);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(79, 29);
             this.lbUsername.TabIndex = 4;
@@ -93,7 +86,7 @@
             this.btnCapNhatThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatThongTin.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhatThongTin.Location = new System.Drawing.Point(814, 287);
+            this.btnCapNhatThongTin.Location = new System.Drawing.Point(814, 187);
             this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
             this.btnCapNhatThongTin.Size = new System.Drawing.Size(250, 57);
             this.btnCapNhatThongTin.TabIndex = 5;
@@ -111,7 +104,7 @@
             this.pbAvatar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.pbAvatar.BorderSize = 2;
             this.pbAvatar.GradientAngle = 50F;
-            this.pbAvatar.Location = new System.Drawing.Point(267, 136);
+            this.pbAvatar.Location = new System.Drawing.Point(267, 36);
             this.pbAvatar.Margin = new System.Windows.Forms.Padding(20);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(220, 220);
@@ -129,7 +122,7 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.White;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.rjPanel1.Location = new System.Drawing.Point(272, 388);
+            this.rjPanel1.Location = new System.Drawing.Point(272, 288);
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(792, 103);
             this.rjPanel1.TabIndex = 6;
@@ -179,76 +172,11 @@
             this.pbAvatarInStatus.TabIndex = 0;
             this.pbAvatarInStatus.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pbIconSearch);
-            this.panel1.Controls.Add(this.pbAvatarLogin);
-            this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1380, 100);
-            this.panel1.TabIndex = 7;
-            // 
-            // pbIconSearch
-            // 
-            this.pbIconSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.pbIconSearch.BackgroundImage = global::Blog.Properties.Resources.icon_search;
-            this.pbIconSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbIconSearch.Location = new System.Drawing.Point(1017, 32);
-            this.pbIconSearch.Name = "pbIconSearch";
-            this.pbIconSearch.Size = new System.Drawing.Size(36, 36);
-            this.pbIconSearch.TabIndex = 3;
-            this.pbIconSearch.TabStop = false;
-            // 
-            // pbAvatarLogin
-            // 
-            this.pbAvatarLogin.BackColor = System.Drawing.Color.Silver;
-            this.pbAvatarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbAvatarLogin.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbAvatarLogin.BorderColor = System.Drawing.Color.Transparent;
-            this.pbAvatarLogin.BorderColor2 = System.Drawing.Color.Transparent;
-            this.pbAvatarLogin.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbAvatarLogin.BorderSize = 2;
-            this.pbAvatarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbAvatarLogin.GradientAngle = 50F;
-            this.pbAvatarLogin.Location = new System.Drawing.Point(1271, 12);
-            this.pbAvatarLogin.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.pbAvatarLogin.Name = "pbAvatarLogin";
-            this.pbAvatarLogin.Size = new System.Drawing.Size(80, 80);
-            this.pbAvatarLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvatarLogin.TabIndex = 1;
-            this.pbAvatarLogin.TabStop = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.txtSearch.BorderColor = System.Drawing.Color.Transparent;
-            this.txtSearch.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtSearch.BorderRadius = 10;
-            this.txtSearch.BorderSize = 1;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtSearch.Location = new System.Drawing.Point(272, 20);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Multiline = false;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(15, 17, 60, 17);
-            this.txtSearch.PasswordChar = false;
-            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceholderText = "";
-            this.txtSearch.Size = new System.Drawing.Size(792, 60);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.Texts = "Tìm kiếm tài khoản";
-            this.txtSearch.UnderlinedStyle = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(536, 182);
+            this.label1.Location = new System.Drawing.Point(536, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 29);
             this.label1.TabIndex = 8;
@@ -265,7 +193,7 @@
             this.btnCapNhatAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhatAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatAvatar.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhatAvatar.Location = new System.Drawing.Point(541, 287);
+            this.btnCapNhatAvatar.Location = new System.Drawing.Point(541, 187);
             this.btnCapNhatAvatar.Name = "btnCapNhatAvatar";
             this.btnCapNhatAvatar.Size = new System.Drawing.Size(250, 57);
             this.btnCapNhatAvatar.TabIndex = 9;
@@ -278,7 +206,7 @@
             // 
             this.lbCongViec.AutoSize = true;
             this.lbCongViec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCongViec.Location = new System.Drawing.Point(536, 235);
+            this.lbCongViec.Location = new System.Drawing.Point(536, 135);
             this.lbCongViec.Name = "lbCongViec";
             this.lbCongViec.Size = new System.Drawing.Size(188, 29);
             this.lbCongViec.TabIndex = 10;
@@ -288,11 +216,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 900);
+            this.ClientSize = new System.Drawing.Size(1380, 800);
             this.Controls.Add(this.lbCongViec);
             this.Controls.Add(this.btnCapNhatAvatar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.rjPanel1);
             this.Controls.Add(this.btnCapNhatThongTin);
             this.Controls.Add(this.lbUsername);
@@ -308,9 +235,6 @@
             this.rjPanel1.ResumeLayout(false);
             this.rjPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarInStatus)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,10 +250,6 @@
         private CustomControls.RJControls.RJPanel rjPanel2;
         private System.Windows.Forms.Label lbStatus;
         private CustomControls.RJControls.RJCircularPictureBox pbAvatarInStatus;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbIconSearch;
-        private CustomControls.RJControls.RJCircularPictureBox pbAvatarLogin;
-        private CustomControls.RJControls.RJTextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJButton btnCapNhatAvatar;
         private System.Windows.Forms.Label lbCongViec;

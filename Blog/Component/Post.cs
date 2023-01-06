@@ -38,14 +38,21 @@ namespace Blog.Component
         {
             if (lbUser.Text == Login.login_username)
             {
-                Profile frm = new Profile();
-                frm.ShowDialog();
+                Profile profile = new Profile();
+                profile.TopLevel = false;
+                Main.pnMainParent.Controls.Clear();
+                Main.pnMainParent.Controls.Add(profile);
+                profile.Show();
             }
             else
             {
                 OtherProfile.other_username = lbUser.Text;
-                OtherProfile frm = new OtherProfile();
-                frm.ShowDialog();
+
+                OtherProfile otherprofile = new OtherProfile();
+                otherprofile.TopLevel = false;
+                Main.pnMainParent.Controls.Clear();
+                Main.pnMainParent.Controls.Add(otherprofile);
+                otherprofile.Show();
             }
         }
 
@@ -54,14 +61,21 @@ namespace Blog.Component
         {
             if (lbUser.Text == Login.login_username)
             {
-                Profile frm = new Profile();
-                frm.ShowDialog();
+                Profile profile = new Profile();
+                profile.TopLevel = false;
+                Main.pnMainParent.Controls.Clear();
+                Main.pnMainParent.Controls.Add(profile);
+                profile.Show();
             }
             else
             {
                 OtherProfile.other_username = lbUser.Text;
-                OtherProfile frm = new OtherProfile();
-                frm.ShowDialog();
+
+                OtherProfile otherprofile = new OtherProfile();
+                otherprofile.TopLevel = false;
+                Main.pnMainParent.Controls.Clear();
+                Main.pnMainParent.Controls.Add(otherprofile);
+                otherprofile.Show();
             }
         }
 

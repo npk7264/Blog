@@ -25,3 +25,31 @@ D:\III\CS511\Blog\Blog\obj\Debug\Blog.OtherProfile.resources
 D:\III\CS511\Blog\Blog\obj\Debug\Blog.Component.Comment.resources
 D:\III\CS511\Blog\Blog\obj\Debug\Blog.CommentList.resources
 D:\III\CS511\Blog\Blog\obj\Debug\Blog.Component.Img.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\bin\Debug\Blog.exe.config
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\bin\Debug\Blog.exe
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\bin\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\bin\Debug\Interop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.csproj.AssemblyReference.cache
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Interop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.csproj.ResolveComReference.cache
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.CommentList.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Component.Comment.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Component.Img.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Component.Post.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.EditPost.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Home.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Login.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.NewPost.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.OtherProfile.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Profile.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Properties.Resources.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.SignUp.resources
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.csproj.GenerateResource.cache
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.csproj.CoreCompileInputs.cache
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.csproj.CopyComplete
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.exe
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\New folder\Blog\Blog\obj\Debug\Blog.Main.resources
