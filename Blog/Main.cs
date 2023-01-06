@@ -73,5 +73,30 @@ namespace Blog
             Main.pnMainParent.Controls.Add(profile);
             profile.Show();
         }
+
+        void setList(string list)
+        {
+            pic_home.Image = Resources.icon_home;
+            postList postList = new postList(list);
+            postList.TopLevel = false;
+            Main.pnMainParent.Controls.Clear();
+            Main.pnMainParent.Controls.Add(postList);
+            postList.Show();
+        }
+
+        private void danhSáchYêuThíchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setList("yêu thích");
+        }
+
+        private void danhSáchĐãLưuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setList("đã lưu");
+        }
+
+        private void danhSáchĐãBìnhLuậnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setList("đã bình luận");
+        }
     }
 }

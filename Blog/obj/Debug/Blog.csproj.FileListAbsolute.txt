@@ -80,3 +80,4 @@ E:\Downloads\blog\Blog\obj\Debug\Blog.csproj.CoreCompileInputs.cache
 E:\Downloads\blog\Blog\obj\Debug\Blog.csproj.CopyComplete
 E:\Downloads\blog\Blog\obj\Debug\Blog.exe
 E:\Downloads\blog\Blog\obj\Debug\Blog.pdb
+E:\Downloads\blog\Blog\obj\Debug\Blog.postList.resources
