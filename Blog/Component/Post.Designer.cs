@@ -35,19 +35,22 @@
             this.pnSetting1 = new CustomControls.RJControls.RJPanel();
             this.btnXoa = new CustomControls.RJControls.RJButton();
             this.btnChinhSua = new CustomControls.RJControls.RJButton();
-            this.pnSetting0 = new CustomControls.RJControls.RJPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pic_likeCount = new System.Windows.Forms.PictureBox();
             this.lbSoComment = new System.Windows.Forms.Label();
             this.lbSoLike = new System.Windows.Forms.Label();
+            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
+            this.pbMusic = new System.Windows.Forms.PictureBox();
+            this.pbPublic = new System.Windows.Forms.PictureBox();
+            this.pic_likeCount = new System.Windows.Forms.PictureBox();
             this.pbLuu = new System.Windows.Forms.PictureBox();
             this.pbComment = new System.Windows.Forms.PictureBox();
             this.pbLike = new System.Windows.Forms.PictureBox();
-            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
             this.pbSetting = new System.Windows.Forms.PictureBox();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.pnSetting1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLuu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComment)).BeginInit();
@@ -82,7 +85,7 @@
             // 
             this.rtbStatus.BackColor = System.Drawing.Color.White;
             this.rtbStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbStatus.Cursor = System.Windows.Forms.Cursors.Default;
+            this.rtbStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbStatus.Location = new System.Drawing.Point(20, 100);
             this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
@@ -151,20 +154,6 @@
             this.btnChinhSua.UseVisualStyleBackColor = false;
             this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
             // 
-            // pnSetting0
-            // 
-            this.pnSetting0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.pnSetting0.BorderRadius = 30;
-            this.pnSetting0.ForeColor = System.Drawing.Color.Black;
-            this.pnSetting0.GradientAngle = 90F;
-            this.pnSetting0.GradientBottomColor = System.Drawing.Color.LightSteelBlue;
-            this.pnSetting0.GradientTopColor = System.Drawing.Color.LightSteelBlue;
-            this.pnSetting0.Location = new System.Drawing.Point(509, 24);
-            this.pnSetting0.Name = "pnSetting0";
-            this.pnSetting0.Size = new System.Drawing.Size(217, 92);
-            this.pnSetting0.TabIndex = 9;
-            this.pnSetting0.Visible = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pic_likeCount);
@@ -174,22 +163,11 @@
             this.panel1.Controls.Add(this.pbComment);
             this.panel1.Controls.Add(this.pbLike);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 465);
+            this.panel1.Location = new System.Drawing.Point(0, 494);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(792, 136);
             this.panel1.TabIndex = 10;
-            // 
-            // pic_likeCount
-            // 
-            this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
-            this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_likeCount.Location = new System.Drawing.Point(22, 11);
-            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
-            this.pic_likeCount.Name = "pic_likeCount";
-            this.pic_likeCount.Size = new System.Drawing.Size(38, 38);
-            this.pic_likeCount.TabIndex = 17;
-            this.pic_likeCount.TabStop = false;
             // 
             // lbSoComment
             // 
@@ -211,6 +189,49 @@
             this.lbSoLike.Size = new System.Drawing.Size(84, 25);
             this.lbSoLike.TabIndex = 15;
             this.lbSoLike.Text = "Lượt like";
+            // 
+            // flpnImage
+            // 
+            this.flpnImage.BackColor = System.Drawing.Color.White;
+            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpnImage.Location = new System.Drawing.Point(0, 277);
+            this.flpnImage.Name = "flpnImage";
+            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.flpnImage.Size = new System.Drawing.Size(792, 217);
+            this.flpnImage.TabIndex = 11;
+            this.flpnImage.WrapContents = false;
+            // 
+            // pbMusic
+            // 
+            this.pbMusic.BackgroundImage = global::Blog.Properties.Resources.music_on;
+            this.pbMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMusic.Location = new System.Drawing.Point(364, 45);
+            this.pbMusic.Name = "pbMusic";
+            this.pbMusic.Size = new System.Drawing.Size(30, 30);
+            this.pbMusic.TabIndex = 13;
+            this.pbMusic.TabStop = false;
+            this.pbMusic.Click += new System.EventHandler(this.pbMusic_Click);
+            // 
+            // pbPublic
+            // 
+            this.pbPublic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbPublic.Location = new System.Drawing.Point(300, 45);
+            this.pbPublic.Name = "pbPublic";
+            this.pbPublic.Size = new System.Drawing.Size(30, 30);
+            this.pbPublic.TabIndex = 12;
+            this.pbPublic.TabStop = false;
+            // 
+            // pic_likeCount
+            // 
+            this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
+            this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_likeCount.Location = new System.Drawing.Point(22, 11);
+            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_likeCount.Name = "pic_likeCount";
+            this.pic_likeCount.Size = new System.Drawing.Size(38, 38);
+            this.pic_likeCount.TabIndex = 17;
+            this.pic_likeCount.TabStop = false;
             // 
             // pbLuu
             // 
@@ -254,16 +275,6 @@
             this.pbLike.TabStop = false;
             this.pbLike.Click += new System.EventHandler(this.pbLike_Click);
             // 
-            // flpnImage
-            // 
-            this.flpnImage.BackColor = System.Drawing.Color.White;
-            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpnImage.Location = new System.Drawing.Point(0, 278);
-            this.flpnImage.Name = "flpnImage";
-            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.flpnImage.Size = new System.Drawing.Size(792, 187);
-            this.flpnImage.TabIndex = 11;
-            // 
             // pbSetting
             // 
             this.pbSetting.BackColor = System.Drawing.Color.Transparent;
@@ -302,9 +313,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pbMusic);
+            this.Controls.Add(this.pbPublic);
             this.Controls.Add(this.flpnImage);
             this.Controls.Add(this.pnSetting1);
-            this.Controls.Add(this.pnSetting0);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbSetting);
             this.Controls.Add(this.rtbStatus);
@@ -313,11 +325,13 @@
             this.Controls.Add(this.pbAvatar);
             this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.Name = "Post";
-            this.Size = new System.Drawing.Size(792, 601);
+            this.Size = new System.Drawing.Size(792, 630);
             this.Load += new System.EventHandler(this.Post_Load);
             this.pnSetting1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLuu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComment)).EndInit();
@@ -339,7 +353,6 @@
         private CustomControls.RJControls.RJPanel pnSetting1;
         private CustomControls.RJControls.RJButton btnXoa;
         private CustomControls.RJControls.RJButton btnChinhSua;
-        private CustomControls.RJControls.RJPanel pnSetting0;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbSoComment;
         private System.Windows.Forms.Label lbSoLike;
@@ -348,5 +361,7 @@
         private System.Windows.Forms.PictureBox pbLike;
         private System.Windows.Forms.FlowLayoutPanel flpnImage;
         private System.Windows.Forms.PictureBox pic_likeCount;
+        private System.Windows.Forms.PictureBox pbPublic;
+        private System.Windows.Forms.PictureBox pbMusic;
     }
 }

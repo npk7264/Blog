@@ -83,11 +83,23 @@
     <Compile Include="Component\Img.Designer.cs">
       <DependentUpon>Img.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\ImgInGallery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\ImgInGallery.Designer.cs">
+      <DependentUpon>ImgInGallery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\Post.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Component\Post.Designer.cs">
       <DependentUpon>Post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\searchUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\searchUser.Designer.cs">
+      <DependentUpon>searchUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="EditPost.cs">
@@ -101,6 +113,12 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgGallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgGallery.Designer.cs">
+      <DependentUpon>ImgGallery.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -120,11 +138,23 @@
     <Compile Include="NewPost.Designer.cs">
       <DependentUpon>NewPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherImgGallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherImgGallery.Designer.cs">
+      <DependentUpon>OtherImgGallery.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OtherProfile.Designer.cs">
       <DependentUpon>OtherProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="postList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="postList.Designer.cs">
+      <DependentUpon>postList.cs</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
@@ -134,6 +164,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,14 +185,23 @@
     <EmbeddedResource Include="Component\Img.resx">
       <DependentUpon>Img.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component\ImgInGallery.resx">
+      <DependentUpon>ImgInGallery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\Post.resx">
       <DependentUpon>Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\searchUser.resx">
+      <DependentUpon>searchUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPost.resx">
       <DependentUpon>EditPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgGallery.resx">
+      <DependentUpon>ImgGallery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -167,8 +212,14 @@
     <EmbeddedResource Include="NewPost.resx">
       <DependentUpon>NewPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherImgGallery.resx">
+      <DependentUpon>OtherImgGallery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OtherProfile.resx">
       <DependentUpon>OtherProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="postList.resx">
+      <DependentUpon>postList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
@@ -183,6 +234,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +298,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\picture\icon-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-homeClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\icon-personClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\font_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\back_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\gallery_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\music_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\music_on.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

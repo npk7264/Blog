@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Blog.Component;
 
 namespace Blog
 {
@@ -19,23 +21,54 @@ namespace Blog
 
         private void EditPost_Load(object sender, EventArgs e)
         {
+            string avt = Functions.GetFieldValues(
+                "select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
+            pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
+
             string id = Profile.post_edit_id;
             lbUser.Text = Functions.GetFieldValues("select TenDangNhap from BAIVIET where ID_BaiViet = N'" + id + "'");
             lbTime.Text = Functions.GetFieldValues("select ThoiGianDang from BAIVIET where ID_BaiViet = N'" + id + "'");
             string state = Functions.GetFieldValues("select CongKhai from BAIVIET where ID_BaiViet = N'" + id + "'");
-            if(state == "True")
-                rbCongKhai.Checked = true; 
+            if (state == "True")
+                rbCongKhai.Checked = true;
             else
                 rbRiengTu.Checked = true;
 
             rtbStatus.LoadFile("PostFolder/" + id + ".rtf", RichTextBoxStreamType.RichText);
+
+            // Load ảnh
+            string thumucImg = Functions.GetFieldValues("select ThuMucAnh from BAIVIET where ID_BaiViet = N'" + Profile.post_edit_id + "'");
+            // Kiểm tra thư mục có ảnh không
+            if (thumucImg != "noImg")
+            {
+
+                string[] files = Directory.GetFiles(thumucImg);
+                foreach (string file in files)
+                {
+                    Img img = new Img();
+                    img.ImgPath = file;
+                    flpnImage.Visible = true;
+                    flpnImage.Controls.Add(img);
+                }
+            }
+
+            if (flpnImage.Controls.Count == 0)
+            {
+                this.Height = 200 + rtbStatus.Height;
+                flpnImage.Visible = false;
+            }
+            else
+            {
+                flpnImage.Visible = true;
+                this.Height = 200 + rtbStatus.Height + flpnImage.Height;
+            }
 
         }
 
         private void btnLuuThayDoi_Click(object sender, EventArgs e)
         {
             string sql = "update BAIVIET " +
-                "set CongKhai = N'" + rbCongKhai.Checked.ToString() + 
+                "set CongKhai = N'" + rbCongKhai.Checked.ToString() +
                 "' where ID_BaiViet = N'" + Profile.post_edit_id + "'";
 
             string key = Profile.post_edit_id;
@@ -44,6 +77,16 @@ namespace Blog
             rtbStatus.SaveFile(tenfile, RichTextBoxStreamType.RichText);
             Functions.RunSQL(sql);
             this.Close();
+        }
+
+        private void pbFont_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                //rtbStatus.SelectionFont = fontDialog.Font;
+                rtbStatus.Font = fontDialog.Font;
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Blog
         private void Profile_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
-            
+
             pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
             pbAvatarInStatus.BackgroundImage = Image.FromFile("avatar/" + avt);
             lbTen.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
@@ -49,18 +49,16 @@ namespace Blog
 
         public static string post_edit_id;
 
-        private void btnCapNhatThongTin_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void lbStatus_Click(object sender, EventArgs e)
         {
             NewPost frm = new NewPost();
             frm.ShowDialog();
             // Reload trang
-            flowLayoutPanel1.Controls.Clear();
-            LoadPost();
+            if (Home.check_newpost == 1)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                LoadPost();
+            }
         }
 
         private void btnCapNhatAvatar_Click(object sender, EventArgs e)
@@ -72,12 +70,14 @@ namespace Blog
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string file_path = openFileDialog.FileName;
-                File.Copy(file_path, "avatar/" + Path.GetFileName(file_path), true);
+                File.Copy(file_path, "avatar/" + Functions.CreateKey("avt") + Path.GetFileName(file_path), true);
 
-                pbAvatar.BackgroundImage = Image.FromFile(file_path);
+                pbAvatar.BackgroundImage = Image.FromFile("avatar/" + Functions.CreateKey("avt") + Path.GetFileName(file_path));
+                // Cập nhật avt trong sql
+                Functions.RunSQL("update TAIKHOAN set Avatar = N'" + Functions.CreateKey("avt") + Path.GetFileName(file_path) + "' where TenDangNhap = N'" + Login.login_username + "'");
 
-                Functions.RunSQL("update TAIKHOAN set Avatar = N'" + Path.GetFileName(file_path) + "' where TenDangNhap = N'" + Login.login_username + "'");
-
+                // Cập nhật avt trên header
+                Main.pbMainAvatarLogin.BackgroundImage = Image.FromFile(file_path);
                 // Reload trang
                 Profile profile = new Profile();
                 profile.TopLevel = false;
@@ -85,6 +85,11 @@ namespace Blog
                 Main.pnMainParent.Controls.Add(profile);
                 profile.Show();
             }
+        }
+        private void pbThuMucAnh_Click(object sender, EventArgs e)
+        {
+            ImgGallery frm = new ImgGallery();
+            frm.ShowDialog();
         }
     }
 }

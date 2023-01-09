@@ -80,8 +80,8 @@
             // 
             this.pbAvtComment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbAvtComment.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbAvtComment.BorderColor = System.Drawing.Color.White;
-            this.pbAvtComment.BorderColor2 = System.Drawing.Color.White;
+            this.pbAvtComment.BorderColor = System.Drawing.Color.Transparent;
+            this.pbAvtComment.BorderColor2 = System.Drawing.Color.Transparent;
             this.pbAvtComment.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.pbAvtComment.BorderSize = 2;
             this.pbAvtComment.GradientAngle = 50F;

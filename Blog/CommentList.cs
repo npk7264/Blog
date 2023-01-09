@@ -49,5 +49,10 @@ namespace Blog
 
             flowLayoutPanel1.Controls.Add(comment);
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

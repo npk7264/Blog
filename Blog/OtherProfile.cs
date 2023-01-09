@@ -57,5 +57,11 @@ namespace Blog
             Profile frm = new Profile();
             frm.ShowDialog();
         }
+
+        private void pbThuMucAnh_Click(object sender, EventArgs e)
+        {
+            OtherImgGallery frm = new OtherImgGallery();
+            frm.ShowDialog();
+        }
     }
 }

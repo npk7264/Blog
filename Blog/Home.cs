@@ -19,6 +19,8 @@ namespace Blog
             flowLayoutPanel1.AutoScroll = true;
         }
 
+        public static int check_newpost = 0;
+
         private void Home_Load(object sender, EventArgs e)
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
@@ -54,8 +56,11 @@ namespace Blog
             NewPost frm = new NewPost();
             frm.ShowDialog();
             // Reload trang
-            flowLayoutPanel1.Controls.Clear();
-            LoadPost();
+            if (check_newpost == 1)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                LoadPost();
+            }
         }
 
         private void pbAvatarLogin_Click(object sender, EventArgs e)

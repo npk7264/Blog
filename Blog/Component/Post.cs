@@ -16,6 +16,8 @@ namespace Blog.Component
         public Post()
         {
             InitializeComponent();
+            flpnImage.AutoScroll = true;
+            flpnImage.HorizontalScroll.Enabled = true;
         }
 
         private string _username;
@@ -88,15 +90,6 @@ namespace Blog.Component
                 else
                     pnSetting1.Visible = true;
             }
-            else
-            {
-                if (pnSetting0.Visible == true)
-                    pnSetting0.Visible = false;
-                else
-                    pnSetting0.Visible = true;
-            }
-
-
         }
 
         public static Control parent_control;
@@ -109,24 +102,8 @@ namespace Blog.Component
             EditPost frm = new EditPost();
             frm.ShowDialog();
 
-            //parent_control = this.Parent;
-            //parent_control.Controls.Clear();
-            //ReLoad();
-        }
-
-
-        void ReLoad()
-        {
-            List<string> ListBaiViet = Functions.GetFieldValuesList(
-                "select ID_BaiViet from BAIVIET order by ThoiGianDang desc");
-
-            foreach (string baiviet in ListBaiViet)
-            {
-                Post post = new Post();
-                post.Username = Functions.GetFieldValues("select TenDangNhap from BAIVIET where ID_BaiViet = N'" + baiviet + "'");
-                post.Time = Functions.GetFieldValues("select ThoiGianDang from BAIVIET where ID_BaiViet = N'" + baiviet + "'");
-                parent_control.Controls.Add(post);
-            }
+            flpnImage.Controls.Clear();
+            LoadPost();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -143,12 +120,28 @@ namespace Blog.Component
         // Hiển thị khi mở bài viết
         private void Post_Load(object sender, EventArgs e)
         {
+            if (this.Username != Login.login_username)
+                pbSetting.Visible = false;
+            LoadPost();
+        }
+
+        // Load
+        void LoadPost()
+        {
             string ID_BaiViet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET " +
                 "where TenDangNhap = N'" + this.Username + "' and ThoiGianDang = '" + this.Time + "'");
 
             // Ảnh đại diện
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + this.Username + "'");
             pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
+
+            // Trạng thái
+            string picpublic = Functions.GetFieldValues("select CongKhai from BAIVIET " +
+                "where TenDangNhap = N'" + this.Username + "' and ThoiGianDang = '" + this.Time + "'");
+            if (picpublic == "True")
+                pbPublic.BackgroundImage = Image.FromFile("picture/icon-public.png");
+            else
+                pbPublic.BackgroundImage = Image.FromFile("picture/icon-private.png");
 
             // Nội dung bài viết
             rtbStatus.LoadFile("PostFolder/" + ID_BaiViet + ".rtf", RichTextBoxStreamType.RichText);
@@ -165,7 +158,7 @@ namespace Blog.Component
                 start += text.Length;
             }
 
-            rtbStatus.Height = height + 10;
+            rtbStatus.Height = height + rtbStatus.SelectionFont.Height;
 
             // Load ảnh
             string thumucImg = Functions.GetFieldValues("select ThuMucAnh from BAIVIET where ID_BaiViet = N'" + ID_BaiViet + "'");
@@ -216,6 +209,16 @@ namespace Blog.Component
             // Lượt comment
             lbSoComment.Text = Functions.GetFieldValues("select COUNT(*) from COMMENT " +
                 "where ID_BaiViet = N'" + ID_BaiViet + "'") + " bình luận";
+
+            // Nhạc
+            pbMusic.Tag = "music_on";
+            pbMusic.BackgroundImage = Image.FromFile("picture/music_on.png");
+
+            string musicState = Functions.GetFieldValues("select FileNhac from BAIVIET where ID_BaiViet = N'" + ID_BaiViet + "'");
+            if (musicState == "noMusic")
+                pbMusic.Visible = false;
+            else
+                pbMusic.Visible = true;
         }
 
         // Comment
@@ -276,6 +279,26 @@ namespace Blog.Component
                     "ID_BaiViet = N'" + ID_BaiViet + "' and TenDangNhapLuu = N'" + Login.login_username + "'";
                 Functions.RunSQL(sql);
                 pbLuu.BackgroundImage = Image.FromFile("picture/icon-save.png");
+            }
+        }
+
+        private void pbMusic_Click(object sender, EventArgs e)
+        {
+            Main.musicPlayer.controls.stop();
+
+            string music = Functions.GetFieldValues("select FileNhac from BAIVIET where TenDangNhap = N'" + this.Username + "' and ThoiGianDang = '" + this.Time + "'");
+            string musicState = (string)pbMusic.Tag;
+            if (musicState == "music_on")
+            {
+                pbMusic.Tag = "music_off";
+                pbMusic.BackgroundImage = Image.FromFile("picture/music_off.png");
+                Main.musicPlayer.URL = "music/" + music;
+            }
+            else
+            {
+                pbMusic.Tag = "music_on";
+                pbMusic.BackgroundImage = Image.FromFile("picture/music_on.png");
+                Main.musicPlayer.controls.stop();
             }
         }
     }

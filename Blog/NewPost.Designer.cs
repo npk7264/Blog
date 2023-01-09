@@ -38,25 +38,31 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pbAddImage = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbAddMusic = new System.Windows.Forms.PictureBox();
+            this.pbColor = new System.Windows.Forms.PictureBox();
+            this.pbFont = new System.Windows.Forms.PictureBox();
+            this.pbAddImage = new System.Windows.Forms.PictureBox();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddMusic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangBai
             // 
-            this.btnDangBai.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDangBai.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDangBai.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDangBai.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.btnDangBai.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnDangBai.BorderRadius = 10;
             this.btnDangBai.BorderSize = 0;
             this.btnDangBai.FlatAppearance.BorderSize = 0;
             this.btnDangBai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangBai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangBai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangBai.ForeColor = System.Drawing.Color.White;
             this.btnDangBai.Location = new System.Drawing.Point(20, 10);
             this.btnDangBai.Name = "btnDangBai";
@@ -69,15 +75,19 @@
             // 
             // rtbStatus
             // 
-            this.rtbStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.rtbStatus.BackColor = System.Drawing.SystemColors.Control;
             this.rtbStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbStatus.Location = new System.Drawing.Point(20, 156);
+            this.rtbStatus.ForeColor = System.Drawing.Color.Gray;
+            this.rtbStatus.Location = new System.Drawing.Point(26, 156);
             this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.rtbStatus.Name = "rtbStatus";
-            this.rtbStatus.Size = new System.Drawing.Size(752, 239);
+            this.rtbStatus.Size = new System.Drawing.Size(734, 239);
             this.rtbStatus.TabIndex = 15;
-            this.rtbStatus.Text = "";
+            this.rtbStatus.TabStop = false;
+            this.rtbStatus.Text = "Bạn đang nghĩ gì?";
+            this.rtbStatus.Enter += new System.EventHandler(this.rtbStatus_Enter);
             // 
             // lbUser
             // 
@@ -93,6 +103,7 @@
             // 
             this.rbCongKhai.AutoSize = true;
             this.rbCongKhai.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rbCongKhai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCongKhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCongKhai.Location = new System.Drawing.Point(105, 98);
             this.rbCongKhai.MinimumSize = new System.Drawing.Size(0, 21);
@@ -109,6 +120,7 @@
             // 
             this.rbRiengTu.AutoSize = true;
             this.rbRiengTu.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rbRiengTu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbRiengTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbRiengTu.Location = new System.Drawing.Point(257, 98);
             this.rbRiengTu.MinimumSize = new System.Drawing.Size(0, 21);
@@ -135,21 +147,23 @@
             // 
             this.panel1.Controls.Add(this.btnDangBai);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 646);
+            this.panel1.Location = new System.Drawing.Point(0, 676);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 80);
             this.panel1.TabIndex = 20;
             // 
             // flpnImage
             // 
-            this.flpnImage.BackColor = System.Drawing.Color.White;
+            this.flpnImage.AutoScroll = true;
+            this.flpnImage.BackColor = System.Drawing.SystemColors.Control;
             this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flpnImage.Location = new System.Drawing.Point(0, 461);
             this.flpnImage.Name = "flpnImage";
             this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.flpnImage.Size = new System.Drawing.Size(800, 185);
+            this.flpnImage.Size = new System.Drawing.Size(800, 215);
             this.flpnImage.TabIndex = 21;
             this.flpnImage.Visible = false;
+            this.flpnImage.WrapContents = false;
             // 
             // panel2
             // 
@@ -161,18 +175,6 @@
             this.panel2.Size = new System.Drawing.Size(800, 60);
             this.panel2.TabIndex = 22;
             // 
-            // pbAddImage
-            // 
-            this.pbAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAddImage.BackgroundImage")));
-            this.pbAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbAddImage.Location = new System.Drawing.Point(284, 8);
-            this.pbAddImage.Margin = new System.Windows.Forms.Padding(4);
-            this.pbAddImage.Name = "pbAddImage";
-            this.pbAddImage.Size = new System.Drawing.Size(45, 45);
-            this.pbAddImage.TabIndex = 24;
-            this.pbAddImage.TabStop = false;
-            this.pbAddImage.Click += new System.EventHandler(this.pbAddImage_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -182,6 +184,58 @@
             this.label2.Size = new System.Drawing.Size(225, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "Thêm ảnh vào bài viết";
+            // 
+            // pbAddMusic
+            // 
+            this.pbAddMusic.BackgroundImage = global::Blog.Properties.Resources.music_add;
+            this.pbAddMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAddMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddMusic.Location = new System.Drawing.Point(556, 82);
+            this.pbAddMusic.Margin = new System.Windows.Forms.Padding(4);
+            this.pbAddMusic.Name = "pbAddMusic";
+            this.pbAddMusic.Size = new System.Drawing.Size(45, 45);
+            this.pbAddMusic.TabIndex = 27;
+            this.pbAddMusic.TabStop = false;
+            this.pbAddMusic.Click += new System.EventHandler(this.pbAddMusic_Click);
+            // 
+            // pbColor
+            // 
+            this.pbColor.BackgroundImage = global::Blog.Properties.Resources.color;
+            this.pbColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbColor.Location = new System.Drawing.Point(634, 82);
+            this.pbColor.Margin = new System.Windows.Forms.Padding(4);
+            this.pbColor.Name = "pbColor";
+            this.pbColor.Size = new System.Drawing.Size(45, 45);
+            this.pbColor.TabIndex = 26;
+            this.pbColor.TabStop = false;
+            this.pbColor.Click += new System.EventHandler(this.pbColor_Click);
+            // 
+            // pbFont
+            // 
+            this.pbFont.BackgroundImage = global::Blog.Properties.Resources.font_icon;
+            this.pbFont.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbFont.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFont.Location = new System.Drawing.Point(716, 82);
+            this.pbFont.Margin = new System.Windows.Forms.Padding(4);
+            this.pbFont.Name = "pbFont";
+            this.pbFont.Size = new System.Drawing.Size(56, 45);
+            this.pbFont.TabIndex = 25;
+            this.pbFont.TabStop = false;
+            this.pbFont.Click += new System.EventHandler(this.pbFont_Click);
+            // 
+            // pbAddImage
+            // 
+            this.pbAddImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbAddImage.BackgroundImage")));
+            this.pbAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAddImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddImage.Location = new System.Drawing.Point(284, 8);
+            this.pbAddImage.Margin = new System.Windows.Forms.Padding(4);
+            this.pbAddImage.Name = "pbAddImage";
+            this.pbAddImage.Size = new System.Drawing.Size(45, 45);
+            this.pbAddImage.TabIndex = 24;
+            this.pbAddImage.TabStop = false;
+            this.pbAddImage.Click += new System.EventHandler(this.pbAddImage_Click);
             // 
             // pbAvatar
             // 
@@ -203,7 +257,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 726);
+            this.ClientSize = new System.Drawing.Size(800, 756);
+            this.Controls.Add(this.pbAddMusic);
+            this.Controls.Add(this.pbColor);
+            this.Controls.Add(this.pbFont);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flpnImage);
             this.Controls.Add(this.panel1);
@@ -221,6 +278,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddMusic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFont)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
@@ -242,5 +302,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pbAddImage;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbFont;
+        private System.Windows.Forms.PictureBox pbColor;
+        private System.Windows.Forms.PictureBox pbAddMusic;
     }
 }

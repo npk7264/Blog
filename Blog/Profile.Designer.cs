@@ -31,19 +31,20 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lbTen = new System.Windows.Forms.Label();
             this.lbUsername = new System.Windows.Forms.Label();
-            this.btnCapNhatThongTin = new CustomControls.RJControls.RJButton();
-            this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.rjPanel1 = new CustomControls.RJControls.RJPanel();
             this.rjPanel2 = new CustomControls.RJControls.RJPanel();
             this.lbStatus = new System.Windows.Forms.Label();
-            this.pbAvatarInStatus = new CustomControls.RJControls.RJCircularPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCapNhatAvatar = new CustomControls.RJControls.RJButton();
             this.lbCongViec = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.pbThuMucAnh = new System.Windows.Forms.PictureBox();
+            this.pbAvatarInStatus = new CustomControls.RJControls.RJCircularPictureBox();
+            this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.rjPanel1.SuspendLayout();
             this.rjPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThuMucAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarInStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -74,43 +75,6 @@
             this.lbUsername.Size = new System.Drawing.Size(79, 29);
             this.lbUsername.TabIndex = 4;
             this.lbUsername.Text = "label2";
-            // 
-            // btnCapNhatThongTin
-            // 
-            this.btnCapNhatThongTin.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCapNhatThongTin.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCapNhatThongTin.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCapNhatThongTin.BorderRadius = 10;
-            this.btnCapNhatThongTin.BorderSize = 0;
-            this.btnCapNhatThongTin.FlatAppearance.BorderSize = 0;
-            this.btnCapNhatThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatThongTin.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhatThongTin.Location = new System.Drawing.Point(814, 187);
-            this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
-            this.btnCapNhatThongTin.Size = new System.Drawing.Size(250, 57);
-            this.btnCapNhatThongTin.TabIndex = 5;
-            this.btnCapNhatThongTin.Text = "Cập nhật thông tin";
-            this.btnCapNhatThongTin.TextColor = System.Drawing.Color.White;
-            this.btnCapNhatThongTin.UseVisualStyleBackColor = false;
-            this.btnCapNhatThongTin.Click += new System.EventHandler(this.btnCapNhatThongTin_Click);
-            // 
-            // pbAvatar
-            // 
-            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbAvatar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbAvatar.BorderColor = System.Drawing.Color.White;
-            this.pbAvatar.BorderColor2 = System.Drawing.Color.White;
-            this.pbAvatar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbAvatar.BorderSize = 2;
-            this.pbAvatar.GradientAngle = 50F;
-            this.pbAvatar.Location = new System.Drawing.Point(267, 36);
-            this.pbAvatar.Margin = new System.Windows.Forms.Padding(20);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(220, 220);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvatar.TabIndex = 2;
-            this.pbAvatar.TabStop = false;
             // 
             // rjPanel1
             // 
@@ -155,23 +119,6 @@
             this.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbStatus.Click += new System.EventHandler(this.lbStatus_Click);
             // 
-            // pbAvatarInStatus
-            // 
-            this.pbAvatarInStatus.BackColor = System.Drawing.Color.Silver;
-            this.pbAvatarInStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbAvatarInStatus.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbAvatarInStatus.BorderColor = System.Drawing.Color.Transparent;
-            this.pbAvatarInStatus.BorderColor2 = System.Drawing.Color.Transparent;
-            this.pbAvatarInStatus.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbAvatarInStatus.BorderSize = 2;
-            this.pbAvatarInStatus.GradientAngle = 50F;
-            this.pbAvatarInStatus.Location = new System.Drawing.Point(20, 14);
-            this.pbAvatarInStatus.Name = "pbAvatarInStatus";
-            this.pbAvatarInStatus.Size = new System.Drawing.Size(75, 75);
-            this.pbAvatarInStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvatarInStatus.TabIndex = 0;
-            this.pbAvatarInStatus.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -189,13 +136,14 @@
             this.btnCapNhatAvatar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnCapNhatAvatar.BorderRadius = 10;
             this.btnCapNhatAvatar.BorderSize = 0;
+            this.btnCapNhatAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhatAvatar.FlatAppearance.BorderSize = 0;
             this.btnCapNhatAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhatAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatAvatar.ForeColor = System.Drawing.Color.White;
             this.btnCapNhatAvatar.Location = new System.Drawing.Point(541, 187);
             this.btnCapNhatAvatar.Name = "btnCapNhatAvatar";
-            this.btnCapNhatAvatar.Size = new System.Drawing.Size(250, 57);
+            this.btnCapNhatAvatar.Size = new System.Drawing.Size(270, 57);
             this.btnCapNhatAvatar.TabIndex = 9;
             this.btnCapNhatAvatar.Text = "Cập nhật ảnh đại diện";
             this.btnCapNhatAvatar.TextColor = System.Drawing.Color.White;
@@ -212,16 +160,63 @@
             this.lbCongViec.TabIndex = 10;
             this.lbCongViec.Text = "Cầu thủ bóng đá";
             // 
+            // pbThuMucAnh
+            // 
+            this.pbThuMucAnh.BackgroundImage = global::Blog.Properties.Resources.gallery_icon;
+            this.pbThuMucAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbThuMucAnh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbThuMucAnh.Location = new System.Drawing.Point(831, 187);
+            this.pbThuMucAnh.Name = "pbThuMucAnh";
+            this.pbThuMucAnh.Size = new System.Drawing.Size(60, 57);
+            this.pbThuMucAnh.TabIndex = 11;
+            this.pbThuMucAnh.TabStop = false;
+            this.pbThuMucAnh.Click += new System.EventHandler(this.pbThuMucAnh_Click);
+            // 
+            // pbAvatarInStatus
+            // 
+            this.pbAvatarInStatus.BackColor = System.Drawing.Color.Silver;
+            this.pbAvatarInStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbAvatarInStatus.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbAvatarInStatus.BorderColor = System.Drawing.Color.Transparent;
+            this.pbAvatarInStatus.BorderColor2 = System.Drawing.Color.Transparent;
+            this.pbAvatarInStatus.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbAvatarInStatus.BorderSize = 2;
+            this.pbAvatarInStatus.GradientAngle = 50F;
+            this.pbAvatarInStatus.Location = new System.Drawing.Point(20, 14);
+            this.pbAvatarInStatus.Name = "pbAvatarInStatus";
+            this.pbAvatarInStatus.Size = new System.Drawing.Size(75, 75);
+            this.pbAvatarInStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatarInStatus.TabIndex = 0;
+            this.pbAvatarInStatus.TabStop = false;
+            // 
+            // pbAvatar
+            // 
+            this.pbAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbAvatar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbAvatar.BorderColor = System.Drawing.Color.White;
+            this.pbAvatar.BorderColor2 = System.Drawing.Color.White;
+            this.pbAvatar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbAvatar.BorderSize = 5;
+            this.pbAvatar.GradientAngle = 50F;
+            this.pbAvatar.Location = new System.Drawing.Point(267, 36);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(20);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(220, 220);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.TabIndex = 2;
+            this.pbAvatar.TabStop = false;
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1380, 800);
+            this.Controls.Add(this.pbThuMucAnh);
             this.Controls.Add(this.lbCongViec);
             this.Controls.Add(this.btnCapNhatAvatar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjPanel1);
-            this.Controls.Add(this.btnCapNhatThongTin);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.lbTen);
             this.Controls.Add(this.pbAvatar);
@@ -231,10 +226,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.Profile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.rjPanel1.ResumeLayout(false);
             this.rjPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbThuMucAnh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarInStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +241,6 @@
         private CustomControls.RJControls.RJCircularPictureBox pbAvatar;
         private System.Windows.Forms.Label lbTen;
         private System.Windows.Forms.Label lbUsername;
-        private CustomControls.RJControls.RJButton btnCapNhatThongTin;
         private CustomControls.RJControls.RJPanel rjPanel1;
         private CustomControls.RJControls.RJPanel rjPanel2;
         private System.Windows.Forms.Label lbStatus;
@@ -253,6 +248,7 @@
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJButton btnCapNhatAvatar;
         private System.Windows.Forms.Label lbCongViec;
+        private System.Windows.Forms.PictureBox pbThuMucAnh;
     }
 }
 

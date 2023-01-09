@@ -36,14 +36,15 @@
             // 
             // btnNewAcc
             // 
-            this.btnNewAcc.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnNewAcc.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnNewAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(171)))), ((int)(((byte)(61)))));
+            this.btnNewAcc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(171)))), ((int)(((byte)(61)))));
             this.btnNewAcc.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnNewAcc.BorderRadius = 10;
             this.btnNewAcc.BorderSize = 0;
+            this.btnNewAcc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewAcc.FlatAppearance.BorderSize = 0;
             this.btnNewAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewAcc.ForeColor = System.Drawing.Color.White;
             this.btnNewAcc.Location = new System.Drawing.Point(568, 518);
             this.btnNewAcc.Name = "btnNewAcc";
@@ -57,14 +58,15 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnLogin.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogin.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnLogin.BorderRadius = 10;
             this.btnLogin.BorderSize = 0;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(568, 452);
             this.btnLogin.Name = "btnLogin";
@@ -82,10 +84,10 @@
             this.txbMatKhau.BorderColor = System.Drawing.Color.Black;
             this.txbMatKhau.BorderFocusColor = System.Drawing.Color.RoyalBlue;
             this.txbMatKhau.BorderRadius = 10;
-            this.txbMatKhau.BorderSize = 1;
+            this.txbMatKhau.BorderSize = 2;
             this.txbMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMatKhau.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txbMatKhau.Location = new System.Drawing.Point(568, 342);
+            this.txbMatKhau.Location = new System.Drawing.Point(568, 338);
             this.txbMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txbMatKhau.Multiline = false;
             this.txbMatKhau.Name = "txbMatKhau";
@@ -95,8 +97,11 @@
             this.txbMatKhau.PlaceholderText = "";
             this.txbMatKhau.Size = new System.Drawing.Size(226, 56);
             this.txbMatKhau.TabIndex = 6;
+            this.txbMatKhau.TabStop = false;
             this.txbMatKhau.Texts = "Mật khẩu";
             this.txbMatKhau.UnderlinedStyle = false;
+            this.txbMatKhau.Enter += new System.EventHandler(this.txbMatKhau_Enter);
+            this.txbMatKhau.Leave += new System.EventHandler(this.txbMatKhau_Leave);
             // 
             // txbTenDangNhap
             // 
@@ -104,7 +109,7 @@
             this.txbTenDangNhap.BorderColor = System.Drawing.Color.Black;
             this.txbTenDangNhap.BorderFocusColor = System.Drawing.Color.RoyalBlue;
             this.txbTenDangNhap.BorderRadius = 10;
-            this.txbTenDangNhap.BorderSize = 1;
+            this.txbTenDangNhap.BorderSize = 2;
             this.txbTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTenDangNhap.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txbTenDangNhap.Location = new System.Drawing.Point(568, 274);
@@ -117,8 +122,11 @@
             this.txbTenDangNhap.PlaceholderText = "";
             this.txbTenDangNhap.Size = new System.Drawing.Size(226, 56);
             this.txbTenDangNhap.TabIndex = 5;
+            this.txbTenDangNhap.TabStop = false;
             this.txbTenDangNhap.Texts = "Tên đăng nhập";
             this.txbTenDangNhap.UnderlinedStyle = false;
+            this.txbTenDangNhap.Enter += new System.EventHandler(this.txbTenDangNhap_Enter);
+            this.txbTenDangNhap.Leave += new System.EventHandler(this.txbTenDangNhap_Leave);
             // 
             // Login
             // 

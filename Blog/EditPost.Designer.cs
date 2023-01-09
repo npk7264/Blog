@@ -36,14 +36,19 @@
             this.lbTime = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
+            this.pbFont = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFont)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 137);
+            this.label1.Location = new System.Drawing.Point(15, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 25);
             this.label1.TabIndex = 27;
@@ -54,7 +59,7 @@
             this.rbRiengTu.AutoSize = true;
             this.rbRiengTu.CheckedColor = System.Drawing.Color.MediumSlateBlue;
             this.rbRiengTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRiengTu.Location = new System.Drawing.Point(310, 133);
+            this.rbRiengTu.Location = new System.Drawing.Point(257, 98);
             this.rbRiengTu.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbRiengTu.Name = "rbRiengTu";
             this.rbRiengTu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -70,7 +75,7 @@
             this.rbCongKhai.AutoSize = true;
             this.rbCongKhai.CheckedColor = System.Drawing.Color.MediumSlateBlue;
             this.rbCongKhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCongKhai.Location = new System.Drawing.Point(112, 133);
+            this.rbCongKhai.Location = new System.Drawing.Point(105, 98);
             this.rbCongKhai.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbCongKhai.Name = "rbCongKhai";
             this.rbCongKhai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -83,17 +88,19 @@
             // 
             // btnLuuThayDoi
             // 
-            this.btnLuuThayDoi.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnLuuThayDoi.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLuuThayDoi.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLuuThayDoi.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.btnLuuThayDoi.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLuuThayDoi.BorderRadius = 0;
+            this.btnLuuThayDoi.BorderRadius = 10;
             this.btnLuuThayDoi.BorderSize = 0;
+            this.btnLuuThayDoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuuThayDoi.FlatAppearance.BorderSize = 0;
             this.btnLuuThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuThayDoi.ForeColor = System.Drawing.Color.White;
-            this.btnLuuThayDoi.Location = new System.Drawing.Point(27, 425);
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(20, 10);
             this.btnLuuThayDoi.Name = "btnLuuThayDoi";
-            this.btnLuuThayDoi.Size = new System.Drawing.Size(752, 40);
+            this.btnLuuThayDoi.Size = new System.Drawing.Size(752, 60);
             this.btnLuuThayDoi.TabIndex = 24;
             this.btnLuuThayDoi.Text = "Lưu thay đổi";
             this.btnLuuThayDoi.TextColor = System.Drawing.Color.White;
@@ -102,11 +109,14 @@
             // 
             // rtbStatus
             // 
-            this.rtbStatus.Location = new System.Drawing.Point(27, 192);
+            this.rtbStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbStatus.Location = new System.Drawing.Point(24, 156);
             this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.rtbStatus.Name = "rtbStatus";
-            this.rtbStatus.Size = new System.Drawing.Size(752, 227);
+            this.rtbStatus.Size = new System.Drawing.Size(752, 239);
             this.rtbStatus.TabIndex = 23;
+            this.rtbStatus.TabStop = false;
             this.rtbStatus.Text = "";
             // 
             // lbTime
@@ -145,15 +155,50 @@
             this.pbAvatar.TabIndex = 20;
             this.pbAvatar.TabStop = false;
             // 
+            // pbFont
+            // 
+            this.pbFont.BackgroundImage = global::Blog.Properties.Resources.font_icon;
+            this.pbFont.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbFont.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFont.Location = new System.Drawing.Point(716, 82);
+            this.pbFont.Margin = new System.Windows.Forms.Padding(4);
+            this.pbFont.Name = "pbFont";
+            this.pbFont.Size = new System.Drawing.Size(56, 45);
+            this.pbFont.TabIndex = 28;
+            this.pbFont.TabStop = false;
+            this.pbFont.Click += new System.EventHandler(this.pbFont_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnLuuThayDoi);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 586);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 80);
+            this.panel1.TabIndex = 29;
+            // 
+            // flpnImage
+            // 
+            this.flpnImage.BackColor = System.Drawing.SystemColors.Control;
+            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpnImage.Location = new System.Drawing.Point(0, 401);
+            this.flpnImage.Name = "flpnImage";
+            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.flpnImage.Size = new System.Drawing.Size(800, 185);
+            this.flpnImage.TabIndex = 30;
+            this.flpnImage.Visible = false;
+            // 
             // EditPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.ClientSize = new System.Drawing.Size(800, 666);
+            this.Controls.Add(this.flpnImage);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbFont);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbRiengTu);
             this.Controls.Add(this.rbCongKhai);
-            this.Controls.Add(this.btnLuuThayDoi);
             this.Controls.Add(this.rtbStatus);
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.lbUser);
@@ -162,6 +207,8 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.EditPost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFont)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +224,8 @@
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbUser;
         private CustomControls.RJControls.RJCircularPictureBox pbAvatar;
+        private System.Windows.Forms.PictureBox pbFont;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flpnImage;
     }
 }

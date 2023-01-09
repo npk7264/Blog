@@ -35,7 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbCongViec = new System.Windows.Forms.Label();
             this.btnCapNhatAvatar = new CustomControls.RJControls.RJButton();
+            this.pbThuMucAnh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThuMucAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUsername
@@ -74,7 +76,7 @@
             this.pbAvatar.BorderColor = System.Drawing.Color.White;
             this.pbAvatar.BorderColor2 = System.Drawing.Color.White;
             this.pbAvatar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbAvatar.BorderSize = 2;
+            this.pbAvatar.BorderSize = 5;
             this.pbAvatar.GradientAngle = 50F;
             this.pbAvatar.Location = new System.Drawing.Point(267, 36);
             this.pbAvatar.Margin = new System.Windows.Forms.Padding(20);
@@ -111,23 +113,38 @@
             this.btnCapNhatAvatar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnCapNhatAvatar.BorderRadius = 10;
             this.btnCapNhatAvatar.BorderSize = 0;
+            this.btnCapNhatAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhatAvatar.FlatAppearance.BorderSize = 0;
             this.btnCapNhatAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhatAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatAvatar.ForeColor = System.Drawing.Color.White;
             this.btnCapNhatAvatar.Location = new System.Drawing.Point(541, 187);
             this.btnCapNhatAvatar.Name = "btnCapNhatAvatar";
-            this.btnCapNhatAvatar.Size = new System.Drawing.Size(250, 57);
+            this.btnCapNhatAvatar.Size = new System.Drawing.Size(270, 57);
             this.btnCapNhatAvatar.TabIndex = 14;
-            this.btnCapNhatAvatar.Text = "Cập nhật ảnh đại diện";
+            this.btnCapNhatAvatar.Text = "Kết bạn";
             this.btnCapNhatAvatar.TextColor = System.Drawing.Color.White;
             this.btnCapNhatAvatar.UseVisualStyleBackColor = false;
+            // 
+            // pbThuMucAnh
+            // 
+            this.pbThuMucAnh.BackgroundImage = global::Blog.Properties.Resources.gallery_icon;
+            this.pbThuMucAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbThuMucAnh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbThuMucAnh.Location = new System.Drawing.Point(831, 187);
+            this.pbThuMucAnh.Name = "pbThuMucAnh";
+            this.pbThuMucAnh.Size = new System.Drawing.Size(60, 57);
+            this.pbThuMucAnh.TabIndex = 15;
+            this.pbThuMucAnh.TabStop = false;
+            this.pbThuMucAnh.Click += new System.EventHandler(this.pbThuMucAnh_Click);
             // 
             // OtherProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1380, 800);
+            this.Controls.Add(this.pbThuMucAnh);
             this.Controls.Add(this.btnCapNhatAvatar);
             this.Controls.Add(this.lbCongViec);
             this.Controls.Add(this.label1);
@@ -141,6 +158,7 @@
             this.Text = "OtherProfile";
             this.Load += new System.EventHandler(this.OtherProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThuMucAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +172,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbCongViec;
         private CustomControls.RJControls.RJButton btnCapNhatAvatar;
+        private System.Windows.Forms.PictureBox pbThuMucAnh;
     }
 }
