@@ -136,5 +136,13 @@ namespace Blog
                 }
             }
         }
+
+        
+
+        private void pic_map_Click(object sender, EventArgs e)
+        {
+            Map map = new Map();
+            map.ShowDialog();
+        }
     }
 }

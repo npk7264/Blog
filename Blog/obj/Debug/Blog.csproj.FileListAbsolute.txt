@@ -119,3 +119,12 @@ C:\Users\Phuc Khang\Downloads\New folder (2)\Blog\Blog\obj\Debug\Blog.OtherImgGa
 C:\Users\Phuc Khang\Downloads\New folder (2)\Blog\Blog\obj\Debug\Blog.ListFriend.resources
 C:\Users\Phuc Khang\Downloads\New folder (2)\Blog\Blog\obj\Debug\Blog.OtherListFriend.resources
 C:\Users\Phuc Khang\Downloads\New folder (2)\Blog\Blog\obj\Debug\Blog.Invite.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.Component.ImgInGallery.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.ImgGallery.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.Invite.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.ListFriend.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.OtherImgGallery.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.OtherListFriend.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.Search.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.Map.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.ShowMap.resources

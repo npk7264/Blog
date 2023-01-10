@@ -219,6 +219,10 @@ namespace Blog.Component
                 pbMusic.Visible = false;
             else
                 pbMusic.Visible = true;
+
+            //map
+            string checkMap = "yes";//or "no"
+            pic_map.Visible = checkMap == "yes" ? true : false;
         }
 
         // Comment
@@ -300,6 +304,14 @@ namespace Blog.Component
                 pbMusic.BackgroundImage = Image.FromFile("picture/music_on.png");
                 Main.musicPlayer.controls.stop();
             }
+        }
+
+        private void pic_map_Click(object sender, EventArgs e)
+        {
+            //biến url đọc dữ liệu từ database
+            string url = "";
+            ShowMap showMap = new ShowMap(url);
+            showMap.ShowDialog();
         }
     }
 }
