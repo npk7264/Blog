@@ -51,6 +51,9 @@
             this.btnYeuThich = new CustomControls.RJControls.RJButton();
             this.fLP_friend = new System.Windows.Forms.FlowLayoutPanel();
             this.lb_friend = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).BeginInit();
@@ -58,11 +61,14 @@
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.fLP_friend.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pic_home);
             this.panel1.Controls.Add(this.pbIconSearch);
             this.panel1.Controls.Add(this.txtSearch);
@@ -70,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1273, 81);
+            this.panel1.Size = new System.Drawing.Size(1299, 81);
             this.panel1.TabIndex = 6;
             // 
             // pic_home
@@ -209,9 +215,9 @@
             // 
             // pnl_chat
             // 
-            this.pnl_chat.Location = new System.Drawing.Point(940, 375);
+            this.pnl_chat.Location = new System.Drawing.Point(3, 289);
             this.pnl_chat.Name = "pnl_chat";
-            this.pnl_chat.Size = new System.Drawing.Size(321, 344);
+            this.pnl_chat.Size = new System.Drawing.Size(347, 344);
             this.pnl_chat.TabIndex = 6;
             // 
             // btnQuanLi
@@ -355,9 +361,10 @@
             // 
             this.fLP_friend.AutoSize = true;
             this.fLP_friend.Controls.Add(this.lb_friend);
-            this.fLP_friend.Location = new System.Drawing.Point(939, 84);
+            this.fLP_friend.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fLP_friend.Location = new System.Drawing.Point(0, 0);
             this.fLP_friend.Name = "fLP_friend";
-            this.fLP_friend.Size = new System.Drawing.Size(334, 268);
+            this.fLP_friend.Size = new System.Drawing.Size(362, 16);
             this.fLP_friend.TabIndex = 9;
             // 
             // lb_friend
@@ -370,14 +377,36 @@
             this.lb_friend.TabIndex = 0;
             this.lb_friend.Text = "DANH SÁCH BẠN BÈ";
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(937, 81);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(336, 650);
+            this.panel3.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(925, 81);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(345, 638);
+            this.panel4.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnl_chat);
+            this.panel5.Controls.Add(this.fLP_friend);
+            this.panel5.Location = new System.Drawing.Point(937, 83);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(362, 645);
+            this.panel5.TabIndex = 9;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1273, 731);
-            this.Controls.Add(this.pnl_chat);
-            this.Controls.Add(this.fLP_friend);
+            this.ClientSize = new System.Drawing.Size(1299, 731);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.panel1);
@@ -395,8 +424,9 @@
             this.panel2.ResumeLayout(false);
             this.fLP_friend.ResumeLayout(false);
             this.fLP_friend.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -423,5 +453,8 @@
         private System.Windows.Forms.Panel pnl_chat;
         private System.Windows.Forms.FlowLayoutPanel fLP_friend;
         private System.Windows.Forms.Label lb_friend;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

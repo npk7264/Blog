@@ -24,18 +24,17 @@ namespace Blog.Chat
         public Server(string id):this()
         {
             idUser = id;
-            Control.CheckForIllegalCrossThreadCalls = false;
-            Connect();
+            //Control.CheckForIllegalCrossThreadCalls = false;
+            //Connect();
         }
         private void picClose_Click(object sender, EventArgs e)
         {
-            Close();
+            client.Close();
+            tcplisten.Stop();
+            this.Close();
         }
 
-        private new void Close()
-        {
-            client.Close();
-        }
+     
         private void btnSend_Click(object sender, EventArgs e)
         {
             Send(client);

@@ -24,11 +24,11 @@ namespace Blog.Chat
         }
         private string idUser;
 
-        public Client(string id)
+        public Client(string id) : this()
         {
             idUser = id;
-            Control.CheckForIllegalCrossThreadCalls = false;
-            Connect();
+            //Control.CheckForIllegalCrossThreadCalls = false;
+            //Connect();
         }
         private void picClose_Click(object sender, EventArgs e)
         {
@@ -38,6 +38,7 @@ namespace Blog.Chat
         private void btnSend_Click(object sender, EventArgs e)
         {
             Send();
+            txbMessage.Clear();
         }
         IPEndPoint ipe;
         TcpClient tcpClient;

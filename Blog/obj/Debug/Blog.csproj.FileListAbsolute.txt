@@ -58,7 +58,6 @@ E:\Downloads\blog\Blog\bin\Debug\Blog.exe
 E:\Downloads\blog\Blog\bin\Debug\Blog.pdb
 E:\Downloads\blog\Blog\bin\Debug\Interop.WMPLib.dll
 E:\Downloads\blog\Blog\bin\Debug\AxInterop.WMPLib.dll
-E:\Downloads\blog\Blog\obj\Debug\Blog.csproj.AssemblyReference.cache
 E:\Downloads\blog\Blog\obj\Debug\Interop.WMPLib.dll
 E:\Downloads\blog\Blog\obj\Debug\AxInterop.WMPLib.dll
 E:\Downloads\blog\Blog\obj\Debug\Blog.csproj.ResolveComReference.cache

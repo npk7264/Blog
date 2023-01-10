@@ -37,14 +37,14 @@ namespace Blog.Component
             Main.pnChat.Controls.Clear();
             if (Login.login_username == "kienvo")
             {
-                Server server = new Server();
+                Server server = new Server(_username);
                 server.TopLevel = false;
                 Main.pnChat.Controls.Add(server);
                 server.Show();
             }
             else
             {
-                Client client = new Client();
+                Client client = new Client(_username);
                 client.TopLevel = false;
                 Main.pnChat.Controls.Add(client);
                 client.Show();
