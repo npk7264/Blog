@@ -40,10 +40,10 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(272, 143);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 143);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1108, 618);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(872, 618);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // rjPanel1
@@ -56,7 +56,7 @@
             this.rjPanel1.GradientAngle = 90F;
             this.rjPanel1.GradientBottomColor = System.Drawing.Color.White;
             this.rjPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.rjPanel1.Location = new System.Drawing.Point(272, 20);
+            this.rjPanel1.Location = new System.Drawing.Point(10, 20);
             this.rjPanel1.Margin = new System.Windows.Forms.Padding(20);
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(792, 103);
@@ -112,7 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1380, 800);
+            this.ClientSize = new System.Drawing.Size(890, 800);
             this.Controls.Add(this.rjPanel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

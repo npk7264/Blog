@@ -91,5 +91,11 @@ namespace Blog
             ImgGallery frm = new ImgGallery();
             frm.ShowDialog();
         }
+
+        private void pbListFriend_Click(object sender, EventArgs e)
+        {
+            ListFriend frm = new ListFriend();
+            frm.ShowDialog();
+        }
     }
 }

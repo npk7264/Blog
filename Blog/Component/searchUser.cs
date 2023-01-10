@@ -50,6 +50,10 @@ namespace Blog.Component
 
         void showProfile()
         {
+            Form frm = this.FindForm();
+            if ((frm is ListFriend) || (frm is OtherListFriend))
+                frm.Close();
+
             if (lbUsername.Text == Login.login_username)
             {
                 Profile profile = new Profile();

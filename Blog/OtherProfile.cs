@@ -24,10 +24,30 @@ namespace Blog
         {
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + other_username + "'");
             pbAvatar.BackgroundImage = Image.FromFile("avatar/" + avt);
-            
+
             lbTen.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + other_username + "'");
             lbUsername.Text = other_username;
             lbCongViec.Text = Functions.GetFieldValues("select CongViec from TAIKHOAN where TenDangNhap = N'" + other_username + "'");
+
+            string sentInvite = Functions.GetFieldValues("select COUNT(*) from BANBE " +
+                "where User1 = N'" + Login.login_username + "' and User2 = N'" + other_username + "' and IsFriend = N'False'");
+            string receiveInvite = Functions.GetFieldValues("select COUNT(*) from BANBE " +
+                "where User2 = N'" + Login.login_username + "' and User1 = N'" + other_username + "' and IsFriend = N'False'");
+
+            string isFriend1 = Functions.GetFieldValues("select COUNT(*) from BANBE " +
+                "where User1 = N'" + Login.login_username + "' and User2 = N'" + other_username + "' and IsFriend = N'True'");
+            string isFriend2 = Functions.GetFieldValues("select COUNT(*) from BANBE " +
+                "where User2 = N'" + Login.login_username + "' and User1 = N'" + other_username + "' and IsFriend = N'True'");
+
+            if (sentInvite == "0" && receiveInvite == "0" && isFriend1 != "0" && isFriend2 != "0")
+                btnKetBan.Text = "Kết bạn";
+            else if (sentInvite == "0" && receiveInvite == "1")
+                btnKetBan.Text = "Chấp nhận kết bạn";
+            else if (sentInvite == "1" && receiveInvite == "0")
+                btnKetBan.Text = "Đã gửi lời mời";
+            else if (isFriend1 == "1" || isFriend2 == "1")
+                btnKetBan.Text = "Bạn bè";
+
             LoadPost();
         }
 
@@ -61,6 +81,26 @@ namespace Blog
         private void pbThuMucAnh_Click(object sender, EventArgs e)
         {
             OtherImgGallery frm = new OtherImgGallery();
+            frm.ShowDialog();
+        }
+
+        private void btnKetBan_Click(object sender, EventArgs e)
+        {
+            if (btnKetBan.Text == "Kết bạn")
+            {
+                Functions.RunSQL("insert into BANBE values(N'" + Login.login_username + "', N'" + other_username + "', N'False')");
+                btnKetBan.Text = "Đã gửi lời mời";
+            }
+            else if (btnKetBan.Text == "Chấp nhận kết bạn")
+            {
+                Functions.RunSQL("update BANBE set IsFriend = N'True' where User1 = N'" + other_username + "' and User2 = N'" + Login.login_username + "'");
+                btnKetBan.Text = "Bạn bè";
+            }
+        }
+
+        private void pbListFriend_Click(object sender, EventArgs e)
+        {
+            OtherListFriend frm = new OtherListFriend();
             frm.ShowDialog();
         }
     }

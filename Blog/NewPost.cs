@@ -108,7 +108,10 @@ namespace Blog
         {
             ColorDialog colorDialog = new ColorDialog();
             if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
                 rtbStatus.SelectionColor = colorDialog.Color;
+                //rtbStatus.BackColor = colorDialog.Color;
+            }
         }
 
         private string tennhac = "noMusic";

@@ -78,6 +78,7 @@ namespace Blog
             {
                 txbMatKhau.Texts = "";
                 txbMatKhau.ForeColor = Color.Black;
+                txbMatKhau.PasswordChar = true;
             }
         }
 
@@ -123,6 +124,7 @@ namespace Blog
             {
                 txbMatKhau.Texts = "Mật khẩu";
                 txbMatKhau.ForeColor = Color.Gray;
+                txbMatKhau.PasswordChar = false;
             }
         }
 

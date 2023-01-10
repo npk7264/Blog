@@ -139,5 +139,35 @@ namespace Blog
                 txtSearch.ForeColor = Color.Gray;
             }
         }
+
+        private void btnYeuThich_Click(object sender, EventArgs e)
+        {
+            setList("yêu thích");
+        }
+
+        private void btnDaLuu_Click(object sender, EventArgs e)
+        {
+            setList("đã lưu");
+        }
+
+        private void btnDaBinhLuan_Click(object sender, EventArgs e)
+        {
+
+            setList("đã bình luận");
+        }
+
+        private void btnKyNiem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnLoiMoi_Click(object sender, EventArgs e)
+        {
+            pic_home.Image = Resources.icon_home;
+            Invite inviteList = new Invite();
+            inviteList.TopLevel = false;
+            Main.pnMainParent.Controls.Clear();
+            Main.pnMainParent.Controls.Add(inviteList);
+            inviteList.Show();
+        }
     }
 }

@@ -28,7 +28,7 @@ namespace Blog
               đã lưu
               đã bình luận*/
             nameList = Message;
-            lbList.Text = "Danh sách bài viết " + Message;
+            lbList.Text = "Bài viết " + Message;
 
             List<string> ListBaiViet = new List<string>();
 

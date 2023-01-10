@@ -36,25 +36,25 @@
             this.btnXoa = new CustomControls.RJControls.RJButton();
             this.btnChinhSua = new CustomControls.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pic_likeCount = new System.Windows.Forms.PictureBox();
             this.lbSoComment = new System.Windows.Forms.Label();
             this.lbSoLike = new System.Windows.Forms.Label();
-            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
-            this.pbMusic = new System.Windows.Forms.PictureBox();
-            this.pbPublic = new System.Windows.Forms.PictureBox();
-            this.pic_likeCount = new System.Windows.Forms.PictureBox();
             this.pbLuu = new System.Windows.Forms.PictureBox();
             this.pbComment = new System.Windows.Forms.PictureBox();
             this.pbLike = new System.Windows.Forms.PictureBox();
+            this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
+            this.pbMusic = new System.Windows.Forms.PictureBox();
+            this.pbPublic = new System.Windows.Forms.PictureBox();
             this.pbSetting = new System.Windows.Forms.PictureBox();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.pnSetting1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLuu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLike)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
@@ -169,6 +169,17 @@
             this.panel1.Size = new System.Drawing.Size(792, 136);
             this.panel1.TabIndex = 10;
             // 
+            // pic_likeCount
+            // 
+            this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
+            this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_likeCount.Location = new System.Drawing.Point(22, 11);
+            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_likeCount.Name = "pic_likeCount";
+            this.pic_likeCount.Size = new System.Drawing.Size(38, 38);
+            this.pic_likeCount.TabIndex = 17;
+            this.pic_likeCount.TabStop = false;
+            // 
             // lbSoComment
             // 
             this.lbSoComment.AutoSize = true;
@@ -189,49 +200,6 @@
             this.lbSoLike.Size = new System.Drawing.Size(84, 25);
             this.lbSoLike.TabIndex = 15;
             this.lbSoLike.Text = "Lượt like";
-            // 
-            // flpnImage
-            // 
-            this.flpnImage.BackColor = System.Drawing.Color.White;
-            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpnImage.Location = new System.Drawing.Point(0, 277);
-            this.flpnImage.Name = "flpnImage";
-            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.flpnImage.Size = new System.Drawing.Size(792, 217);
-            this.flpnImage.TabIndex = 11;
-            this.flpnImage.WrapContents = false;
-            // 
-            // pbMusic
-            // 
-            this.pbMusic.BackgroundImage = global::Blog.Properties.Resources.music_on;
-            this.pbMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMusic.Location = new System.Drawing.Point(364, 45);
-            this.pbMusic.Name = "pbMusic";
-            this.pbMusic.Size = new System.Drawing.Size(30, 30);
-            this.pbMusic.TabIndex = 13;
-            this.pbMusic.TabStop = false;
-            this.pbMusic.Click += new System.EventHandler(this.pbMusic_Click);
-            // 
-            // pbPublic
-            // 
-            this.pbPublic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPublic.Location = new System.Drawing.Point(300, 45);
-            this.pbPublic.Name = "pbPublic";
-            this.pbPublic.Size = new System.Drawing.Size(30, 30);
-            this.pbPublic.TabIndex = 12;
-            this.pbPublic.TabStop = false;
-            // 
-            // pic_likeCount
-            // 
-            this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
-            this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_likeCount.Location = new System.Drawing.Point(22, 11);
-            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
-            this.pic_likeCount.Name = "pic_likeCount";
-            this.pic_likeCount.Size = new System.Drawing.Size(38, 38);
-            this.pic_likeCount.TabIndex = 17;
-            this.pic_likeCount.TabStop = false;
             // 
             // pbLuu
             // 
@@ -274,6 +242,38 @@
             this.pbLike.TabIndex = 12;
             this.pbLike.TabStop = false;
             this.pbLike.Click += new System.EventHandler(this.pbLike_Click);
+            // 
+            // flpnImage
+            // 
+            this.flpnImage.BackColor = System.Drawing.Color.White;
+            this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpnImage.Location = new System.Drawing.Point(0, 277);
+            this.flpnImage.Name = "flpnImage";
+            this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.flpnImage.Size = new System.Drawing.Size(792, 217);
+            this.flpnImage.TabIndex = 11;
+            this.flpnImage.WrapContents = false;
+            // 
+            // pbMusic
+            // 
+            this.pbMusic.BackgroundImage = global::Blog.Properties.Resources.music_on;
+            this.pbMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMusic.Location = new System.Drawing.Point(364, 45);
+            this.pbMusic.Name = "pbMusic";
+            this.pbMusic.Size = new System.Drawing.Size(30, 30);
+            this.pbMusic.TabIndex = 13;
+            this.pbMusic.TabStop = false;
+            this.pbMusic.Click += new System.EventHandler(this.pbMusic_Click);
+            // 
+            // pbPublic
+            // 
+            this.pbPublic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbPublic.Location = new System.Drawing.Point(300, 45);
+            this.pbPublic.Name = "pbPublic";
+            this.pbPublic.Size = new System.Drawing.Size(30, 30);
+            this.pbPublic.TabIndex = 12;
+            this.pbPublic.TabStop = false;
             // 
             // pbSetting
             // 
@@ -330,12 +330,12 @@
             this.pnSetting1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLuu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbComment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLike)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMusic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);

@@ -32,6 +32,7 @@
             this.btnLogin = new CustomControls.RJControls.RJButton();
             this.txbMatKhau = new CustomControls.RJControls.RJTextBox();
             this.txbTenDangNhap = new CustomControls.RJControls.RJTextBox();
+            this.lbQuenMatKhau = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnNewAcc
@@ -46,7 +47,7 @@
             this.btnNewAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewAcc.ForeColor = System.Drawing.Color.White;
-            this.btnNewAcc.Location = new System.Drawing.Point(568, 518);
+            this.btnNewAcc.Location = new System.Drawing.Point(577, 518);
             this.btnNewAcc.Name = "btnNewAcc";
             this.btnNewAcc.Padding = new System.Windows.Forms.Padding(10);
             this.btnNewAcc.Size = new System.Drawing.Size(226, 60);
@@ -68,7 +69,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(568, 452);
+            this.btnLogin.Location = new System.Drawing.Point(577, 452);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(10);
             this.btnLogin.Size = new System.Drawing.Size(226, 60);
@@ -87,7 +88,7 @@
             this.txbMatKhau.BorderSize = 2;
             this.txbMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMatKhau.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txbMatKhau.Location = new System.Drawing.Point(568, 338);
+            this.txbMatKhau.Location = new System.Drawing.Point(577, 338);
             this.txbMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txbMatKhau.Multiline = false;
             this.txbMatKhau.Name = "txbMatKhau";
@@ -112,7 +113,7 @@
             this.txbTenDangNhap.BorderSize = 2;
             this.txbTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTenDangNhap.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txbTenDangNhap.Location = new System.Drawing.Point(568, 274);
+            this.txbTenDangNhap.Location = new System.Drawing.Point(577, 274);
             this.txbTenDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txbTenDangNhap.Multiline = false;
             this.txbTenDangNhap.Name = "txbTenDangNhap";
@@ -128,11 +129,24 @@
             this.txbTenDangNhap.Enter += new System.EventHandler(this.txbTenDangNhap_Enter);
             this.txbTenDangNhap.Leave += new System.EventHandler(this.txbTenDangNhap_Leave);
             // 
+            // lbQuenMatKhau
+            // 
+            this.lbQuenMatKhau.AutoSize = true;
+            this.lbQuenMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbQuenMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuenMatKhau.Location = new System.Drawing.Point(605, 639);
+            this.lbQuenMatKhau.Name = "lbQuenMatKhau";
+            this.lbQuenMatKhau.Size = new System.Drawing.Size(171, 25);
+            this.lbQuenMatKhau.TabIndex = 10;
+            this.lbQuenMatKhau.Text = "Quên mật khẩu?";
+            this.lbQuenMatKhau.Click += new System.EventHandler(this.lbQuenMatKhau_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1380, 900);
+            this.Controls.Add(this.lbQuenMatKhau);
             this.Controls.Add(this.btnNewAcc);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbMatKhau);
@@ -141,6 +155,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -150,5 +165,6 @@
         private CustomControls.RJControls.RJButton btnLogin;
         private CustomControls.RJControls.RJTextBox txbMatKhau;
         private CustomControls.RJControls.RJTextBox txbTenDangNhap;
+        private System.Windows.Forms.Label lbQuenMatKhau;
     }
 }
