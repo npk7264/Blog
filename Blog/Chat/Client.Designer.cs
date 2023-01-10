@@ -90,6 +90,7 @@ namespace Blog.Chat
             // 
             // picAvr
             // 
+            this.picAvr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picAvr.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.picAvr.BorderColor = System.Drawing.Color.RoyalBlue;
             this.picAvr.BorderColor2 = System.Drawing.Color.HotPink;
@@ -105,6 +106,7 @@ namespace Blog.Chat
             // 
             // Client
             // 
+            this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 340);
@@ -117,6 +119,7 @@ namespace Blog.Chat
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Client";
             this.Text = "Client";
+            this.Load += new System.EventHandler(this.Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAvr)).EndInit();
             this.ResumeLayout(false);

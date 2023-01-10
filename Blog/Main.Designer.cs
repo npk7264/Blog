@@ -31,32 +31,32 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pic_home = new System.Windows.Forms.PictureBox();
+            this.pbIconSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new CustomControls.RJControls.RJTextBox();
+            this.pbAvatarLogin = new CustomControls.RJControls.RJCircularPictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.danhSáchYêuThíchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchĐãLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchĐãBìnhLuậnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMain = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_chat = new System.Windows.Forms.Panel();
             this.btnQuanLi = new CustomControls.RJControls.RJButton();
             this.btnLoiMoi = new CustomControls.RJControls.RJButton();
             this.btnKyNiem = new CustomControls.RJControls.RJButton();
             this.btnDaBinhLuan = new CustomControls.RJControls.RJButton();
             this.btnDaLuu = new CustomControls.RJControls.RJButton();
             this.btnYeuThich = new CustomControls.RJControls.RJButton();
-            this.pnl_chat = new System.Windows.Forms.Panel();
-            this.pic_home = new System.Windows.Forms.PictureBox();
-            this.pbIconSearch = new System.Windows.Forms.PictureBox();
-            this.pbAvatarLogin = new CustomControls.RJControls.RJCircularPictureBox();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fLP_friend = new System.Windows.Forms.FlowLayoutPanel();
             this.lb_friend = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.fLP_friend.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,30 @@
             this.panel1.Size = new System.Drawing.Size(1273, 81);
             this.panel1.TabIndex = 6;
             // 
+            // pic_home
+            // 
+            this.pic_home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_home.Location = new System.Drawing.Point(80, 13);
+            this.pic_home.Name = "pic_home";
+            this.pic_home.Size = new System.Drawing.Size(50, 50);
+            this.pic_home.TabIndex = 5;
+            this.pic_home.TabStop = false;
+            this.pic_home.Click += new System.EventHandler(this.pic_home_Click);
+            // 
+            // pbIconSearch
+            // 
+            this.pbIconSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+            this.pbIconSearch.BackgroundImage = global::Blog.Properties.Resources.icon_search;
+            this.pbIconSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbIconSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbIconSearch.Location = new System.Drawing.Point(738, 22);
+            this.pbIconSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.pbIconSearch.Name = "pbIconSearch";
+            this.pbIconSearch.Size = new System.Drawing.Size(27, 29);
+            this.pbIconSearch.TabIndex = 4;
+            this.pbIconSearch.TabStop = false;
+            this.pbIconSearch.Click += new System.EventHandler(this.pbIconSearch_Click);
+            // 
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
@@ -84,7 +108,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtSearch.Location = new System.Drawing.Point(375, 13);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Padding = new System.Windows.Forms.Padding(11, 14, 45, 14);
@@ -99,6 +123,27 @@
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            // 
+            // pbAvatarLogin
+            // 
+            this.pbAvatarLogin.BackColor = System.Drawing.Color.Silver;
+            this.pbAvatarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbAvatarLogin.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbAvatarLogin.BorderColor = System.Drawing.Color.Transparent;
+            this.pbAvatarLogin.BorderColor2 = System.Drawing.Color.Transparent;
+            this.pbAvatarLogin.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbAvatarLogin.BorderSize = 2;
+            this.pbAvatarLogin.ContextMenuStrip = this.contextMenuStrip1;
+            this.pbAvatarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAvatarLogin.GradientAngle = 50F;
+            this.pbAvatarLogin.Location = new System.Drawing.Point(1173, 11);
+            this.pbAvatarLogin.Margin = new System.Windows.Forms.Padding(2, 2, 15, 2);
+            this.pbAvatarLogin.Name = "pbAvatarLogin";
+            this.pbAvatarLogin.Size = new System.Drawing.Size(60, 60);
+            this.pbAvatarLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatarLogin.TabIndex = 1;
+            this.pbAvatarLogin.TabStop = false;
+            this.pbAvatarLogin.Click += new System.EventHandler(this.pbAvatarLogin_Click);
             // 
             // contextMenuStrip1
             // 
@@ -132,17 +177,24 @@
             this.danhSáchĐãBìnhLuậnToolStripMenuItem.Text = "Danh sách đã bình luận";
             this.danhSáchĐãBìnhLuậnToolStripMenuItem.Click += new System.EventHandler(this.danhSáchĐãBìnhLuậnToolStripMenuItem_Click);
             // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngXuấtToolStripMenuItem.Image")));
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
             // pnMain
             // 
-            this.pnMain.Location = new System.Drawing.Point(368, 81);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnMain.Location = new System.Drawing.Point(252, 83);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(668, 650);
             this.pnMain.TabIndex = 7;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pnl_chat);
             this.panel2.Controls.Add(this.btnQuanLi);
             this.panel2.Controls.Add(this.btnLoiMoi);
             this.panel2.Controls.Add(this.btnKyNiem);
@@ -150,10 +202,17 @@
             this.panel2.Controls.Add(this.btnDaLuu);
             this.panel2.Controls.Add(this.btnYeuThich);
             this.panel2.Location = new System.Drawing.Point(0, 81);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 650);
+            this.panel2.Size = new System.Drawing.Size(238, 650);
             this.panel2.TabIndex = 8;
+            // 
+            // pnl_chat
+            // 
+            this.pnl_chat.Location = new System.Drawing.Point(940, 375);
+            this.pnl_chat.Name = "pnl_chat";
+            this.pnl_chat.Size = new System.Drawing.Size(321, 344);
+            this.pnl_chat.TabIndex = 6;
             // 
             // btnQuanLi
             // 
@@ -167,8 +226,8 @@
             this.btnQuanLi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuanLi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLi.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLi.Location = new System.Drawing.Point(80, 248);
-            this.btnQuanLi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuanLi.Location = new System.Drawing.Point(34, 247);
+            this.btnQuanLi.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuanLi.Name = "btnQuanLi";
             this.btnQuanLi.Size = new System.Drawing.Size(181, 41);
             this.btnQuanLi.TabIndex = 5;
@@ -189,8 +248,8 @@
             this.btnLoiMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoiMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoiMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnLoiMoi.Location = new System.Drawing.Point(80, 202);
-            this.btnLoiMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoiMoi.Location = new System.Drawing.Point(34, 202);
+            this.btnLoiMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoiMoi.Name = "btnLoiMoi";
             this.btnLoiMoi.Size = new System.Drawing.Size(181, 41);
             this.btnLoiMoi.TabIndex = 4;
@@ -212,8 +271,8 @@
             this.btnKyNiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKyNiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKyNiem.ForeColor = System.Drawing.Color.Black;
-            this.btnKyNiem.Location = new System.Drawing.Point(80, 157);
-            this.btnKyNiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKyNiem.Location = new System.Drawing.Point(34, 157);
+            this.btnKyNiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnKyNiem.Name = "btnKyNiem";
             this.btnKyNiem.Size = new System.Drawing.Size(181, 41);
             this.btnKyNiem.TabIndex = 3;
@@ -235,8 +294,8 @@
             this.btnDaBinhLuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDaBinhLuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDaBinhLuan.ForeColor = System.Drawing.Color.Black;
-            this.btnDaBinhLuan.Location = new System.Drawing.Point(80, 111);
-            this.btnDaBinhLuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDaBinhLuan.Location = new System.Drawing.Point(34, 112);
+            this.btnDaBinhLuan.Margin = new System.Windows.Forms.Padding(2);
             this.btnDaBinhLuan.Name = "btnDaBinhLuan";
             this.btnDaBinhLuan.Size = new System.Drawing.Size(181, 41);
             this.btnDaBinhLuan.TabIndex = 2;
@@ -258,8 +317,8 @@
             this.btnDaLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDaLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDaLuu.ForeColor = System.Drawing.Color.Black;
-            this.btnDaLuu.Location = new System.Drawing.Point(80, 66);
-            this.btnDaLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDaLuu.Location = new System.Drawing.Point(34, 65);
+            this.btnDaLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnDaLuu.Name = "btnDaLuu";
             this.btnDaLuu.Size = new System.Drawing.Size(181, 41);
             this.btnDaLuu.TabIndex = 1;
@@ -281,8 +340,8 @@
             this.btnYeuThich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeuThich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYeuThich.ForeColor = System.Drawing.Color.Black;
-            this.btnYeuThich.Location = new System.Drawing.Point(80, 20);
-            this.btnYeuThich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYeuThich.Location = new System.Drawing.Point(34, 17);
+            this.btnYeuThich.Margin = new System.Windows.Forms.Padding(2);
             this.btnYeuThich.Name = "btnYeuThich";
             this.btnYeuThich.Size = new System.Drawing.Size(181, 41);
             this.btnYeuThich.TabIndex = 0;
@@ -292,72 +351,13 @@
             this.btnYeuThich.UseVisualStyleBackColor = false;
             this.btnYeuThich.Click += new System.EventHandler(this.btnYeuThich_Click);
             // 
-            // pnl_chat
-            // 
-            this.pnl_chat.Location = new System.Drawing.Point(12, 294);
-            this.pnl_chat.Name = "pnl_chat";
-            this.pnl_chat.Size = new System.Drawing.Size(321, 344);
-            this.pnl_chat.TabIndex = 6;
-            // 
-            // pic_home
-            // 
-            this.pic_home.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_home.Location = new System.Drawing.Point(80, 13);
-            this.pic_home.Name = "pic_home";
-            this.pic_home.Size = new System.Drawing.Size(50, 50);
-            this.pic_home.TabIndex = 5;
-            this.pic_home.TabStop = false;
-            this.pic_home.Click += new System.EventHandler(this.pic_home_Click);
-            // 
-            // pbIconSearch
-            // 
-            this.pbIconSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.pbIconSearch.BackgroundImage = global::Blog.Properties.Resources.icon_search;
-            this.pbIconSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbIconSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbIconSearch.Location = new System.Drawing.Point(738, 22);
-            this.pbIconSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.pbIconSearch.Name = "pbIconSearch";
-            this.pbIconSearch.Size = new System.Drawing.Size(27, 29);
-            this.pbIconSearch.TabIndex = 4;
-            this.pbIconSearch.TabStop = false;
-            this.pbIconSearch.Click += new System.EventHandler(this.pbIconSearch_Click);
-            // 
-            // pbAvatarLogin
-            // 
-            this.pbAvatarLogin.BackColor = System.Drawing.Color.Silver;
-            this.pbAvatarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbAvatarLogin.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbAvatarLogin.BorderColor = System.Drawing.Color.Transparent;
-            this.pbAvatarLogin.BorderColor2 = System.Drawing.Color.Transparent;
-            this.pbAvatarLogin.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbAvatarLogin.BorderSize = 2;
-            this.pbAvatarLogin.ContextMenuStrip = this.contextMenuStrip1;
-            this.pbAvatarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbAvatarLogin.GradientAngle = 50F;
-            this.pbAvatarLogin.Location = new System.Drawing.Point(1173, 11);
-            this.pbAvatarLogin.Margin = new System.Windows.Forms.Padding(2, 2, 15, 2);
-            this.pbAvatarLogin.Name = "pbAvatarLogin";
-            this.pbAvatarLogin.Size = new System.Drawing.Size(60, 60);
-            this.pbAvatarLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvatarLogin.TabIndex = 1;
-            this.pbAvatarLogin.TabStop = false;
-            this.pbAvatarLogin.Click += new System.EventHandler(this.pbAvatarLogin_Click);
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngXuấtToolStripMenuItem.Image")));
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
-            // 
             // fLP_friend
             // 
+            this.fLP_friend.AutoSize = true;
             this.fLP_friend.Controls.Add(this.lb_friend);
-            this.fLP_friend.Location = new System.Drawing.Point(1073, 111);
+            this.fLP_friend.Location = new System.Drawing.Point(939, 84);
             this.fLP_friend.Name = "fLP_friend";
-            this.fLP_friend.Size = new System.Drawing.Size(200, 568);
+            this.fLP_friend.Size = new System.Drawing.Size(334, 268);
             this.fLP_friend.TabIndex = 9;
             // 
             // lb_friend
@@ -366,7 +366,7 @@
             this.lb_friend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_friend.Location = new System.Drawing.Point(3, 0);
             this.lb_friend.Name = "lb_friend";
-            this.lb_friend.Size = new System.Drawing.Size(156, 16);
+            this.lb_friend.Size = new System.Drawing.Size(155, 16);
             this.lb_friend.TabIndex = 0;
             this.lb_friend.Text = "DANH SÁCH BẠN BÈ";
             // 
@@ -376,25 +376,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1273, 731);
+            this.Controls.Add(this.pnl_chat);
             this.Controls.Add(this.fLP_friend);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatarLogin)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.fLP_friend.ResumeLayout(false);
             this.fLP_friend.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

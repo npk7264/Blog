@@ -70,6 +70,7 @@ namespace Blog.Chat
             // 
             // picAvr
             // 
+            this.picAvr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picAvr.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.picAvr.BorderColor = System.Drawing.Color.RoyalBlue;
             this.picAvr.BorderColor2 = System.Drawing.Color.HotPink;
@@ -118,6 +119,7 @@ namespace Blog.Chat
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Server";
             this.Text = "Server";
+            this.Load += new System.EventHandler(this.Server_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAvr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);

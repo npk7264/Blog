@@ -22,7 +22,14 @@ namespace Blog.Chat
             Control.CheckForIllegalCrossThreadCalls = false;
             Connect();
         }
+        private string idUser;
 
+        public Client(string id)
+        {
+            idUser = id;
+            Control.CheckForIllegalCrossThreadCalls = false;
+            Connect();
+        }
         private void picClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -68,5 +75,13 @@ namespace Blog.Chat
         {
             lsvMessage.Items.Add(mess);
         }
+
+        private void Client_Load(object sender, EventArgs e)
+        {
+            string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + idUser + "'");
+            picAvr.BackgroundImage = Image.FromFile("avatar/" + avt);
+            lbName.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + idUser + "'");
+        }
+
     }
 }
