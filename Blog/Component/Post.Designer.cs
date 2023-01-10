@@ -48,6 +48,7 @@
             this.pbSetting = new System.Windows.Forms.PictureBox();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
             this.pic_map = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnSetting1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).BeginInit();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_map)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbUser
@@ -177,7 +179,7 @@
             this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
             this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic_likeCount.Location = new System.Drawing.Point(21, 11);
-            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
             this.pic_likeCount.Name = "pic_likeCount";
             this.pic_likeCount.Size = new System.Drawing.Size(37, 38);
             this.pic_likeCount.TabIndex = 17;
@@ -263,8 +265,8 @@
             this.pbMusic.BackgroundImage = global::Blog.Properties.Resources.music_on;
             this.pbMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMusic.Location = new System.Drawing.Point(391, 46);
-            this.pbMusic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMusic.Location = new System.Drawing.Point(55, 2);
+            this.pbMusic.Margin = new System.Windows.Forms.Padding(3, 2, 20, 2);
             this.pbMusic.Name = "pbMusic";
             this.pbMusic.Size = new System.Drawing.Size(29, 30);
             this.pbMusic.TabIndex = 13;
@@ -274,8 +276,8 @@
             // pbPublic
             // 
             this.pbPublic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPublic.Location = new System.Drawing.Point(327, 46);
-            this.pbPublic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbPublic.Location = new System.Drawing.Point(3, 2);
+            this.pbPublic.Margin = new System.Windows.Forms.Padding(3, 2, 20, 2);
             this.pbPublic.Name = "pbPublic";
             this.pbPublic.Size = new System.Drawing.Size(29, 30);
             this.pbPublic.TabIndex = 12;
@@ -320,22 +322,31 @@
             this.pic_map.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_map.BackgroundImage")));
             this.pic_map.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_map.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_map.Location = new System.Drawing.Point(447, 46);
-            this.pic_map.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_map.Location = new System.Drawing.Point(107, 2);
+            this.pic_map.Margin = new System.Windows.Forms.Padding(3, 2, 10, 2);
             this.pic_map.Name = "pic_map";
-            this.pic_map.Size = new System.Drawing.Size(32, 30);
+            this.pic_map.Size = new System.Drawing.Size(29, 30);
             this.pic_map.TabIndex = 14;
             this.pic_map.TabStop = false;
             this.pic_map.Click += new System.EventHandler(this.pic_map_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.pbPublic);
+            this.flowLayoutPanel1.Controls.Add(this.pbMusic);
+            this.flowLayoutPanel1.Controls.Add(this.pic_map);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(318, 41);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(152, 34);
+            this.flowLayoutPanel1.TabIndex = 15;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // Post
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pic_map);
-            this.Controls.Add(this.pbMusic);
-            this.Controls.Add(this.pbPublic);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flpnImage);
             this.Controls.Add(this.pnSetting1);
             this.Controls.Add(this.panel1);
@@ -360,6 +371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_map)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,5 +398,6 @@
         private System.Windows.Forms.PictureBox pbPublic;
         private System.Windows.Forms.PictureBox pbMusic;
         private System.Windows.Forms.PictureBox pic_map;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

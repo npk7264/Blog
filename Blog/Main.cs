@@ -158,6 +158,12 @@ namespace Blog
 
         private void btnKyNiem_Click(object sender, EventArgs e)
         {
+            pic_home.Image = Resources.icon_home;
+            History historyList = new History();
+            historyList.TopLevel = false;
+            Main.pnMainParent.Controls.Clear();
+            Main.pnMainParent.Controls.Add(historyList);
+            historyList.Show();
         }
 
         private void btnLoiMoi_Click(object sender, EventArgs e)

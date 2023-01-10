@@ -69,7 +69,9 @@ namespace Blog
         {
             string sql = "update BAIVIET " +
                 "set CongKhai = N'" + rbCongKhai.Checked.ToString() +
-                "' where ID_BaiViet = N'" + Profile.post_edit_id + "'";
+                "', FileNhac = N'" + tennhac + "', " +
+                "MapURL = N'" + Map.mapurl + "'" +
+                " where ID_BaiViet = N'" + Profile.post_edit_id + "'";
 
             string key = Profile.post_edit_id;
             string tenfile = "PostFolder/" + key + ".rtf";
@@ -84,8 +86,48 @@ namespace Blog
             FontDialog fontDialog = new FontDialog();
             if (fontDialog.ShowDialog() == DialogResult.OK)
             {
-                //rtbStatus.SelectionFont = fontDialog.Font;
-                rtbStatus.Font = fontDialog.Font;
+                rtbStatus.SelectionFont = fontDialog.Font;
+                //rtbStatus.Font = fontDialog.Font;
+            }
+        }
+
+        private void pic_map_Click(object sender, EventArgs e)
+        {
+            Map map = new Map();
+            map.ShowDialog();
+        }
+
+        private string tennhac = Functions.GetFieldValues("select FileNhac from BAIVIET " +
+            "where ID_BaiViet = N'" + Profile.post_edit_id + "'");
+
+        private void pbAddMusic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select Music";
+            openFileDialog.Filter = "mp3|*.mp3|All Files|*.*";
+
+            //Kiểm tra xem người dùng đã chọn file chưa
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy nhạc
+                string file_path = openFileDialog.FileName;
+                tennhac = Path.GetFileName(file_path);
+
+                // Copy nhạc vào thư mục music nếu chưa có file nhạc
+                if (!File.Exists("music/" + tennhac))
+                {
+                    File.Copy(file_path, "music/" + tennhac, true);
+                }
+            }
+        }
+
+        private void pbColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                rtbStatus.SelectionColor = colorDialog.Color;
+                //rtbStatus.BackColor = colorDialog.Color;
             }
         }
     }

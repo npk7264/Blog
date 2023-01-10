@@ -73,7 +73,7 @@ namespace Blog.Component
             this.pic_avt.BorderColor = System.Drawing.Color.White;
             this.pic_avt.BorderColor2 = System.Drawing.Color.White;
             this.pic_avt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pic_avt.BorderSize = 5;
+            this.pic_avt.BorderSize = 2;
             this.pic_avt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_avt.GradientAngle = 50F;
             this.pic_avt.Location = new System.Drawing.Point(4, 4);

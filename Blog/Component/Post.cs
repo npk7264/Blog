@@ -114,6 +114,12 @@ namespace Blog.Component
             Functions.RunSQL("delete from BAIVIET where " +
                 "TenDangNhap = N'" + Login.login_username + "' and ThoiGianDang = '" + lbTime.Text + "'");
 
+            string idbaiviet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET where " +
+                "TenDangNhap = N'" + Login.login_username + "' and ThoiGianDang = '" + lbTime.Text + "'");
+            Functions.RunSQL("delete from YEUTHICH where ID_BaiViet = N'" + idbaiviet + "'");
+            Functions.RunSQL("delete from LUU where ID_BaiViet = N'" + idbaiviet + "'");
+            Functions.RunSQL("delete from COMMENT where ID_BaiViet = N'" + idbaiviet + "'");
+
             pnSetting1.Visible = false;
         }
 
@@ -158,7 +164,7 @@ namespace Blog.Component
                 start += text.Length;
             }
 
-            rtbStatus.Height = height + rtbStatus.SelectionFont.Height;
+            rtbStatus.Height = height + 30;
 
             // Load ảnh
             string thumucImg = Functions.GetFieldValues("select ThuMucAnh from BAIVIET where ID_BaiViet = N'" + ID_BaiViet + "'");

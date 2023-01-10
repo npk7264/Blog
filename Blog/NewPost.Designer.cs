@@ -106,10 +106,10 @@
             // rbCongKhai
             // 
             this.rbCongKhai.AutoSize = true;
-            this.rbCongKhai.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rbCongKhai.CheckedColor = System.Drawing.Color.CornflowerBlue;
             this.rbCongKhai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCongKhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCongKhai.Location = new System.Drawing.Point(105, 98);
+            this.rbCongKhai.Location = new System.Drawing.Point(120, 98);
             this.rbCongKhai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbCongKhai.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbCongKhai.Name = "rbCongKhai";
@@ -124,10 +124,10 @@
             // rbRiengTu
             // 
             this.rbRiengTu.AutoSize = true;
-            this.rbRiengTu.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rbRiengTu.CheckedColor = System.Drawing.Color.CornflowerBlue;
             this.rbRiengTu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbRiengTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRiengTu.Location = new System.Drawing.Point(257, 98);
+            this.rbRiengTu.Location = new System.Drawing.Point(265, 98);
             this.rbRiengTu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbRiengTu.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbRiengTu.Name = "rbRiengTu";
@@ -190,7 +190,7 @@
             this.pbAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbAddImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAddImage.Location = new System.Drawing.Point(284, 7);
-            this.pbAddImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbAddImage.Margin = new System.Windows.Forms.Padding(4);
             this.pbAddImage.Name = "pbAddImage";
             this.pbAddImage.Size = new System.Drawing.Size(45, 46);
             this.pbAddImage.TabIndex = 24;
@@ -213,7 +213,7 @@
             this.pic_map.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic_map.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_map.Location = new System.Drawing.Point(477, 82);
-            this.pic_map.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_map.Margin = new System.Windows.Forms.Padding(4);
             this.pic_map.Name = "pic_map";
             this.pic_map.Size = new System.Drawing.Size(49, 46);
             this.pic_map.TabIndex = 28;
@@ -226,7 +226,7 @@
             this.pbAddMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbAddMusic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAddMusic.Location = new System.Drawing.Point(556, 82);
-            this.pbAddMusic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbAddMusic.Margin = new System.Windows.Forms.Padding(4);
             this.pbAddMusic.Name = "pbAddMusic";
             this.pbAddMusic.Size = new System.Drawing.Size(45, 46);
             this.pbAddMusic.TabIndex = 27;
@@ -239,7 +239,7 @@
             this.pbColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbColor.Location = new System.Drawing.Point(635, 82);
-            this.pbColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbColor.Margin = new System.Windows.Forms.Padding(4);
             this.pbColor.Name = "pbColor";
             this.pbColor.Size = new System.Drawing.Size(45, 46);
             this.pbColor.TabIndex = 26;
@@ -252,7 +252,7 @@
             this.pbFont.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbFont.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFont.Location = new System.Drawing.Point(716, 82);
-            this.pbFont.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbFont.Margin = new System.Windows.Forms.Padding(4);
             this.pbFont.Name = "pbFont";
             this.pbFont.Size = new System.Drawing.Size(56, 46);
             this.pbFont.TabIndex = 25;

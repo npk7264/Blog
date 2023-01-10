@@ -167,3 +167,4 @@ C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.csproj.Cor
 C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.csproj.CopyComplete
 C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.exe
 C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.History.resources

@@ -43,6 +43,7 @@ namespace Blog
                 Functions.RunSQL("insert into BAIVIET " +
                     "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'noImg', N'" + tennhac + "', N'" + Map.mapurl + "')");
             Home.check_newpost = 1;
+            
             this.Close();
         }
 
@@ -106,12 +107,18 @@ namespace Blog
 
         private void pbColor_Click(object sender, EventArgs e)
         {
+            rtbStatus.SelectAll();
+            rtbStatus.SelectionBackColor = rtbStatus.BackColor;
+            rtbStatus.DeselectAll();
             ColorDialog colorDialog = new ColorDialog();
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 rtbStatus.SelectionColor = colorDialog.Color;
-                //rtbStatus.BackColor = colorDialog.Color;
+                rtbStatus.BackColor = colorDialog.Color;
             }
+            rtbStatus.SelectAll();
+            rtbStatus.SelectionBackColor = rtbStatus.BackColor;
+            rtbStatus.DeselectAll();
         }
 
         private string tennhac = "noMusic";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPost));
             this.label1 = new System.Windows.Forms.Label();
             this.rbRiengTu = new CustomControls.RJControls.RJRadioButton();
             this.rbCongKhai = new CustomControls.RJControls.RJRadioButton();
@@ -39,9 +40,15 @@
             this.pbFont = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flpnImage = new System.Windows.Forms.FlowLayoutPanel();
+            this.pbColor = new System.Windows.Forms.PictureBox();
+            this.pbAddMusic = new System.Windows.Forms.PictureBox();
+            this.pic_map = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFont)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddMusic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_map)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,9 +64,9 @@
             // rbRiengTu
             // 
             this.rbRiengTu.AutoSize = true;
-            this.rbRiengTu.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rbRiengTu.CheckedColor = System.Drawing.Color.CornflowerBlue;
             this.rbRiengTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRiengTu.Location = new System.Drawing.Point(257, 98);
+            this.rbRiengTu.Location = new System.Drawing.Point(265, 98);
             this.rbRiengTu.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbRiengTu.Name = "rbRiengTu";
             this.rbRiengTu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -73,9 +80,9 @@
             // rbCongKhai
             // 
             this.rbCongKhai.AutoSize = true;
-            this.rbCongKhai.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rbCongKhai.CheckedColor = System.Drawing.Color.CornflowerBlue;
             this.rbCongKhai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCongKhai.Location = new System.Drawing.Point(105, 98);
+            this.rbCongKhai.Location = new System.Drawing.Point(120, 98);
             this.rbCongKhai.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbCongKhai.Name = "rbCongKhai";
             this.rbCongKhai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -188,11 +195,53 @@
             this.flpnImage.TabIndex = 30;
             this.flpnImage.Visible = false;
             // 
+            // pbColor
+            // 
+            this.pbColor.BackgroundImage = global::Blog.Properties.Resources.color;
+            this.pbColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbColor.Location = new System.Drawing.Point(635, 82);
+            this.pbColor.Margin = new System.Windows.Forms.Padding(4);
+            this.pbColor.Name = "pbColor";
+            this.pbColor.Size = new System.Drawing.Size(45, 46);
+            this.pbColor.TabIndex = 31;
+            this.pbColor.TabStop = false;
+            this.pbColor.Click += new System.EventHandler(this.pbColor_Click);
+            // 
+            // pbAddMusic
+            // 
+            this.pbAddMusic.BackgroundImage = global::Blog.Properties.Resources.music_add;
+            this.pbAddMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbAddMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddMusic.Location = new System.Drawing.Point(556, 82);
+            this.pbAddMusic.Margin = new System.Windows.Forms.Padding(4);
+            this.pbAddMusic.Name = "pbAddMusic";
+            this.pbAddMusic.Size = new System.Drawing.Size(45, 46);
+            this.pbAddMusic.TabIndex = 32;
+            this.pbAddMusic.TabStop = false;
+            this.pbAddMusic.Click += new System.EventHandler(this.pbAddMusic_Click);
+            // 
+            // pic_map
+            // 
+            this.pic_map.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_map.BackgroundImage")));
+            this.pic_map.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_map.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_map.Location = new System.Drawing.Point(477, 82);
+            this.pic_map.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_map.Name = "pic_map";
+            this.pic_map.Size = new System.Drawing.Size(49, 46);
+            this.pic_map.TabIndex = 33;
+            this.pic_map.TabStop = false;
+            this.pic_map.Click += new System.EventHandler(this.pic_map_Click);
+            // 
             // EditPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 666);
+            this.Controls.Add(this.pic_map);
+            this.Controls.Add(this.pbAddMusic);
+            this.Controls.Add(this.pbColor);
             this.Controls.Add(this.flpnImage);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbFont);
@@ -204,11 +253,15 @@
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.pbAvatar);
             this.Name = "EditPost";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.EditPost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFont)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddMusic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_map)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +280,8 @@
         private System.Windows.Forms.PictureBox pbFont;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flpnImage;
+        private System.Windows.Forms.PictureBox pbColor;
+        private System.Windows.Forms.PictureBox pbAddMusic;
+        private System.Windows.Forms.PictureBox pic_map;
     }
 }
