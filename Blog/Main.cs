@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Blog.Component;
 
 namespace Blog
 {
@@ -19,6 +20,7 @@ namespace Blog
         }
 
         public static Panel pnMainParent;
+        public static Panel pnChat;
         public static PictureBox pbMainAvatarLogin;
         public static string txtsearchUser;
         public static WMPLib.WindowsMediaPlayer musicPlayer = new WMPLib.WindowsMediaPlayer();
@@ -26,6 +28,7 @@ namespace Blog
         private void Main_Load(object sender, EventArgs e)
         {
             pnMainParent = pnMain;
+            pnChat = pnl_chat;
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
             pbAvatarLogin.BackgroundImage = Image.FromFile("avatar/" + avt);
             pbMainAvatarLogin = pbAvatarLogin;
@@ -36,6 +39,21 @@ namespace Blog
             home.TopLevel = false;
             pnMain.Controls.Add(home);
             home.Show();
+
+
+            //load friendChat
+            List<string> ListFriend1 = Functions.GetFieldValuesList("select User2 from BANBE " +
+                "where User1 = N'" + Login.login_username + "' and IsFriend = N'True'");
+            List<string> ListFriend2 = Functions.GetFieldValuesList("select User1 from BANBE " +
+                "where User2 = N'" + Login.login_username + "' and IsFriend = N'True'");
+            List<string> ListFriend = ListFriend1.Concat(ListFriend2).ToList();
+            foreach (string user in ListFriend)
+            {
+                FriendChat friendChat = new FriendChat();
+                friendChat.Username = user;
+                fLP_friend.Controls.Add(friendChat);
+            }
+
         }
 
         //private void pbAvatarLogin_Click(object sender, EventArgs e)

@@ -168,3 +168,8 @@ C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.csproj.Cop
 C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.exe
 C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.pdb
 C:\Users\Phuc Khang\Downloads\New folder (3)\Blog\Blog\obj\Debug\Blog.History.resources
+E:\Downloads\blog\Blog\bin\Debug\SimpleTCP.dll
+E:\Downloads\blog\Blog\obj\Debug\Blog.Chat.Server.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.History.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.Chat.Client.resources
+E:\Downloads\blog\Blog\obj\Debug\Blog.Component.FriendChat.resources

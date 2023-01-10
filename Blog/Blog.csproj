@@ -52,6 +52,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\CustomControl.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleTCP, Version=1.0.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +68,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chat\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat\Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat\Server.Designer.cs">
+      <DependentUpon>Server.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommentList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +91,12 @@
     </Compile>
     <Compile Include="Component\Comment.Designer.cs">
       <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\FriendChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\FriendChat.Designer.cs">
+      <DependentUpon>FriendChat.cs</DependentUpon>
     </Compile>
     <Compile Include="Component\Img.cs">
       <SubType>UserControl</SubType>
@@ -212,11 +233,20 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Chat\Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat\Server.resx">
+      <DependentUpon>Server.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommentList.resx">
       <DependentUpon>CommentList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Comment.resx">
       <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\FriendChat.resx">
+      <DependentUpon>FriendChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Img.resx">
       <DependentUpon>Img.cs</DependentUpon>
@@ -294,6 +324,7 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
