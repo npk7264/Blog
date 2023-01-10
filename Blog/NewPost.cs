@@ -37,11 +37,11 @@ namespace Blog
             // có folder ảnh bài viết
             if (Directory.Exists(tenthumuc))
                 Functions.RunSQL("insert into BAIVIET " +
-                    "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'" + tenthumuc + "', N'" + tennhac + "')");
+                    "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'" + tenthumuc + "', N'" + tennhac + "', N'" + Map.mapurl + "')");
             // bài viết không có ảnh
             else
                 Functions.RunSQL("insert into BAIVIET " +
-                    "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'noImg', N'" + tennhac + "')");
+                    "values(N'" + key + "', N'" + Login.login_username + "', '" + DateTime.Now.ToString() + "', N'" + rbCongKhai.Checked.ToString() + "', N'noImg', N'" + tennhac + "', N'" + Map.mapurl + "')");
             Home.check_newpost = 1;
             this.Close();
         }
@@ -135,6 +135,14 @@ namespace Blog
                     File.Copy(file_path, "music/" + tennhac, true);
                 }
             }
+        }
+
+
+
+        private void pic_map_Click(object sender, EventArgs e)
+        {
+            Map map = new Map();
+            map.ShowDialog();
         }
     }
 }

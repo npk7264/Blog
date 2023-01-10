@@ -47,6 +47,7 @@
             this.pbPublic = new System.Windows.Forms.PictureBox();
             this.pbSetting = new System.Windows.Forms.PictureBox();
             this.pbAvatar = new CustomControls.RJControls.RJCircularPictureBox();
+            this.pic_map = new System.Windows.Forms.PictureBox();
             this.pnSetting1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_likeCount)).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_map)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUser
@@ -88,7 +90,7 @@
             this.rtbStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbStatus.Location = new System.Drawing.Point(20, 100);
-            this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
+            this.rtbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 20, 20);
             this.rtbStatus.Name = "rtbStatus";
             this.rtbStatus.ReadOnly = true;
             this.rtbStatus.Size = new System.Drawing.Size(752, 164);
@@ -106,7 +108,8 @@
             this.pnSetting1.GradientAngle = 90F;
             this.pnSetting1.GradientBottomColor = System.Drawing.Color.LightSteelBlue;
             this.pnSetting1.GradientTopColor = System.Drawing.Color.LightSteelBlue;
-            this.pnSetting1.Location = new System.Drawing.Point(509, 24);
+            this.pnSetting1.Location = new System.Drawing.Point(509, 25);
+            this.pnSetting1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnSetting1.Name = "pnSetting1";
             this.pnSetting1.Size = new System.Drawing.Size(217, 92);
             this.pnSetting1.TabIndex = 8;
@@ -124,9 +127,9 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Location = new System.Drawing.Point(16, 46);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(184, 40);
+            this.btnXoa.Size = new System.Drawing.Size(184, 39);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextColor = System.Drawing.Color.Black;
@@ -145,9 +148,9 @@
             this.btnChinhSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChinhSua.ForeColor = System.Drawing.Color.Black;
             this.btnChinhSua.Location = new System.Drawing.Point(16, 6);
-            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.btnChinhSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(184, 40);
+            this.btnChinhSua.Size = new System.Drawing.Size(184, 39);
             this.btnChinhSua.TabIndex = 0;
             this.btnChinhSua.Text = "Chỉnh sửa";
             this.btnChinhSua.TextColor = System.Drawing.Color.Black;
@@ -163,20 +166,20 @@
             this.panel1.Controls.Add(this.pbComment);
             this.panel1.Controls.Add(this.pbLike);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 494);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 495);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 136);
+            this.panel1.Size = new System.Drawing.Size(792, 135);
             this.panel1.TabIndex = 10;
             // 
             // pic_likeCount
             // 
             this.pic_likeCount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_likeCount.BackgroundImage")));
             this.pic_likeCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_likeCount.Location = new System.Drawing.Point(22, 11);
-            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_likeCount.Location = new System.Drawing.Point(21, 11);
+            this.pic_likeCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_likeCount.Name = "pic_likeCount";
-            this.pic_likeCount.Size = new System.Drawing.Size(38, 38);
+            this.pic_likeCount.Size = new System.Drawing.Size(37, 38);
             this.pic_likeCount.TabIndex = 17;
             this.pic_likeCount.TabStop = false;
             // 
@@ -194,7 +197,7 @@
             // 
             this.lbSoLike.AutoSize = true;
             this.lbSoLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLike.Location = new System.Drawing.Point(70, 18);
+            this.lbSoLike.Location = new System.Drawing.Point(69, 18);
             this.lbSoLike.Margin = new System.Windows.Forms.Padding(3, 0, 3, 30);
             this.lbSoLike.Name = "lbSoLike";
             this.lbSoLike.Size = new System.Drawing.Size(84, 25);
@@ -208,7 +211,7 @@
             this.pbLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbLuu.Location = new System.Drawing.Point(715, 66);
-            this.pbLuu.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.pbLuu.Margin = new System.Windows.Forms.Padding(3, 20, 3, 2);
             this.pbLuu.Name = "pbLuu";
             this.pbLuu.Size = new System.Drawing.Size(60, 60);
             this.pbLuu.TabIndex = 14;
@@ -222,7 +225,7 @@
             this.pbComment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbComment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbComment.Location = new System.Drawing.Point(344, 66);
-            this.pbComment.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.pbComment.Margin = new System.Windows.Forms.Padding(3, 20, 3, 2);
             this.pbComment.Name = "pbComment";
             this.pbComment.Size = new System.Drawing.Size(60, 60);
             this.pbComment.TabIndex = 13;
@@ -235,8 +238,8 @@
             this.pbLike.BackgroundImage = global::Blog.Properties.Resources.icon_like;
             this.pbLike.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLike.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbLike.Location = new System.Drawing.Point(22, 66);
-            this.pbLike.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.pbLike.Location = new System.Drawing.Point(21, 66);
+            this.pbLike.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
             this.pbLike.Name = "pbLike";
             this.pbLike.Size = new System.Drawing.Size(60, 60);
             this.pbLike.TabIndex = 12;
@@ -247,7 +250,8 @@
             // 
             this.flpnImage.BackColor = System.Drawing.Color.White;
             this.flpnImage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpnImage.Location = new System.Drawing.Point(0, 277);
+            this.flpnImage.Location = new System.Drawing.Point(0, 278);
+            this.flpnImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnImage.Name = "flpnImage";
             this.flpnImage.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.flpnImage.Size = new System.Drawing.Size(792, 217);
@@ -259,9 +263,10 @@
             this.pbMusic.BackgroundImage = global::Blog.Properties.Resources.music_on;
             this.pbMusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMusic.Location = new System.Drawing.Point(364, 45);
+            this.pbMusic.Location = new System.Drawing.Point(391, 46);
+            this.pbMusic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMusic.Name = "pbMusic";
-            this.pbMusic.Size = new System.Drawing.Size(30, 30);
+            this.pbMusic.Size = new System.Drawing.Size(29, 30);
             this.pbMusic.TabIndex = 13;
             this.pbMusic.TabStop = false;
             this.pbMusic.Click += new System.EventHandler(this.pbMusic_Click);
@@ -269,9 +274,10 @@
             // pbPublic
             // 
             this.pbPublic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPublic.Location = new System.Drawing.Point(300, 45);
+            this.pbPublic.Location = new System.Drawing.Point(327, 46);
+            this.pbPublic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbPublic.Name = "pbPublic";
-            this.pbPublic.Size = new System.Drawing.Size(30, 30);
+            this.pbPublic.Size = new System.Drawing.Size(29, 30);
             this.pbPublic.TabIndex = 12;
             this.pbPublic.TabStop = false;
             // 
@@ -281,10 +287,10 @@
             this.pbSetting.BackgroundImage = global::Blog.Properties.Resources.icon_menu;
             this.pbSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSetting.Location = new System.Drawing.Point(732, 24);
-            this.pbSetting.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.pbSetting.Location = new System.Drawing.Point(732, 25);
+            this.pbSetting.Margin = new System.Windows.Forms.Padding(3, 20, 3, 2);
             this.pbSetting.Name = "pbSetting";
-            this.pbSetting.Size = new System.Drawing.Size(40, 40);
+            this.pbSetting.Size = new System.Drawing.Size(40, 39);
             this.pbSetting.TabIndex = 7;
             this.pbSetting.TabStop = false;
             this.pbSetting.Click += new System.EventHandler(this.pbSetting_Click);
@@ -301,6 +307,7 @@
             this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAvatar.GradientAngle = 50F;
             this.pbAvatar.Location = new System.Drawing.Point(20, 15);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(60, 60);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -308,11 +315,25 @@
             this.pbAvatar.TabStop = false;
             this.pbAvatar.Click += new System.EventHandler(this.pbAvatar_Click);
             // 
+            // pic_map
+            // 
+            this.pic_map.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_map.BackgroundImage")));
+            this.pic_map.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_map.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_map.Location = new System.Drawing.Point(447, 46);
+            this.pic_map.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_map.Name = "pic_map";
+            this.pic_map.Size = new System.Drawing.Size(32, 30);
+            this.pic_map.TabIndex = 14;
+            this.pic_map.TabStop = false;
+            this.pic_map.Click += new System.EventHandler(this.pic_map_Click);
+            // 
             // Post
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pic_map);
             this.Controls.Add(this.pbMusic);
             this.Controls.Add(this.pbPublic);
             this.Controls.Add(this.flpnImage);
@@ -323,7 +344,7 @@
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.pbAvatar);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 10);
             this.Name = "Post";
             this.Size = new System.Drawing.Size(792, 630);
             this.Load += new System.EventHandler(this.Post_Load);
@@ -338,6 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPublic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_map)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,5 +385,6 @@
         private System.Windows.Forms.PictureBox pic_likeCount;
         private System.Windows.Forms.PictureBox pbPublic;
         private System.Windows.Forms.PictureBox pbMusic;
+        private System.Windows.Forms.PictureBox pic_map;
     }
 }

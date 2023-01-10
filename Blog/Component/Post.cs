@@ -219,6 +219,10 @@ namespace Blog.Component
                 pbMusic.Visible = false;
             else
                 pbMusic.Visible = true;
+
+            //map
+            string checkMap = Functions.GetFieldValues("select MapURL from BAIVIET where ID_BaiViet = N'" + ID_BaiViet + "'");
+            pic_map.Visible = checkMap == "noMap" ? false : true;
         }
 
         // Comment
@@ -300,6 +304,17 @@ namespace Blog.Component
                 pbMusic.BackgroundImage = Image.FromFile("picture/music_on.png");
                 Main.musicPlayer.controls.stop();
             }
+        }
+
+        private void pic_map_Click(object sender, EventArgs e)
+        {
+            //biến url đọc dữ liệu từ database
+            string ID_BaiViet = Functions.GetFieldValues("select ID_BaiViet from BAIVIET " +
+                "where TenDangNhap = N'" + this.Username + "' and ThoiGianDang = '" + this.Time + "'");
+
+            string url = Functions.GetFieldValues("select MapURL from BAIVIET where ID_BaiViet = N'" + ID_BaiViet + "'");
+            ShowMap showMap = new ShowMap(url);
+            showMap.ShowDialog();
         }
     }
 }
