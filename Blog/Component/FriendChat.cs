@@ -30,6 +30,11 @@ namespace Blog.Component
             string avt = Functions.GetFieldValues("select Avatar from TAIKHOAN where TenDangNhap = N'" + _username + "'");
             pic_avr.BackgroundImage = Image.FromFile("avatar/" + avt);
             lb_name.Text = Functions.GetFieldValues("select Ten from TAIKHOAN where TenDangNhap = N'" + _username + "'");
+            string onl = Functions.GetFieldValues("select Onl from TAIKHOAN where TenDangNhap = N'" + _username + "'");
+            if (onl == "True")
+                pbOnl.BackColor = Color.FromArgb(69, 171, 61);
+            else if(onl == "False")
+                pbOnl.BackColor = Color.Gray;
         }
 
         private void pic_avr_Click(object sender, EventArgs e)
@@ -48,7 +53,7 @@ namespace Blog.Component
                 client.TopLevel = false;
                 Main.pnChat.Controls.Add(client);
                 client.Show();
-            }    
+            }
         }
     }
 }

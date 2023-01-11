@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pbBack = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             this.SuspendLayout();
@@ -44,27 +44,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1380, 100);
+            this.panel1.Size = new System.Drawing.Size(1299, 81);
             this.panel1.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(545, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Thư viện ảnh";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(171, 121);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1209, 658);
-            this.flowLayoutPanel1.TabIndex = 13;
             // 
             // pbBack
             // 
@@ -72,21 +53,44 @@
             this.pbBack.BackgroundImage = global::Blog.Properties.Resources.back_icon;
             this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBack.Location = new System.Drawing.Point(64, 10);
+            this.pbBack.Location = new System.Drawing.Point(48, 8);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(80, 80);
+            this.pbBack.Size = new System.Drawing.Size(60, 65);
             this.pbBack.TabIndex = 3;
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(575, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Thư viện ảnh";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(128, 98);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 16, 0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1171, 535);
+            this.flowLayoutPanel1.TabIndex = 13;
+            // 
             // OtherImgGallery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 900);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1299, 731);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OtherImgGallery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OtherImgGallery";

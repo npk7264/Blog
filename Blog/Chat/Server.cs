@@ -47,7 +47,7 @@ namespace Blog.Chat
         void Connect()
         {
             string port = "9999";
-            ipe = new IPEndPoint(IPAddress.Parse("26.64.90.17"), int.Parse(port));
+            ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), int.Parse(port));
             tcplisten = new TcpListener(ipe);
 
 

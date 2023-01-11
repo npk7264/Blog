@@ -172,3 +172,100 @@ E:\Downloads\blog\Blog\obj\Debug\Blog.Chat.Server.resources
 E:\Downloads\blog\Blog\obj\Debug\Blog.History.resources
 E:\Downloads\blog\Blog\obj\Debug\Blog.Chat.Client.resources
 E:\Downloads\blog\Blog\obj\Debug\Blog.Component.FriendChat.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\bin\Debug\Blog.exe.config
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\bin\Debug\Blog.exe
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\bin\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\bin\Debug\SimpleTCP.dll
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\bin\Debug\Interop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.csproj.AssemblyReference.cache
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Interop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.csproj.ResolveComReference.cache
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Chat.Client.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Chat.Server.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.CommentList.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Component.Comment.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Component.FriendChat.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Component.Img.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Component.ImgInGallery.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Component.Post.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Component.searchUser.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.EditPost.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.History.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Home.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.ImgGallery.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Invite.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.ListFriend.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Login.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Main.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Map.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.NewPost.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.OtherImgGallery.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.OtherListFriend.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.OtherProfile.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.postList.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Profile.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Properties.Resources.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.Search.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.ShowMap.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.SignUp.resources
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.csproj.GenerateResource.cache
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.csproj.CoreCompileInputs.cache
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.csproj.CopyComplete
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.exe
+C:\Users\Phuc Khang\Downloads\blog\blog\Blog\obj\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\Blog\Blog\Blog\obj\Debug\Blog.Component.Notice.resources
+C:\Users\Phuc Khang\Downloads\Blog\Blog\Blog\obj\Debug\Blog.ThongBao.resources
+C:\Users\Phuc Khang\Downloads\Blog\Blog\Blog\obj\Debug\Blog.SetPW.resources
+C:\Users\Phuc Khang\Downloads\Blog\Blog\Blog\obj\Debug\Blog.QuenPW.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\bin\Debug\Blog.exe.config
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\bin\Debug\Blog.exe
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\bin\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\bin\Debug\SimpleTCP.dll
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\bin\Debug\Interop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.csproj.AssemblyReference.cache
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Interop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.csproj.ResolveComReference.cache
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Chat.Client.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Chat.Server.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.CommentList.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.Comment.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.FriendChat.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.Img.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.ImgInGallery.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.Notice.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.Post.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.searchUser.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.EditPost.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.History.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Home.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.ImgGallery.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Invite.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.ListFriend.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Login.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Main.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Map.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.NewPost.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.OtherImgGallery.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.OtherListFriend.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.OtherProfile.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.postList.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Profile.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Properties.Resources.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.QuenPW.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Search.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.SetPW.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.ShowMap.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.SignUp.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.ThongBao.resources
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.csproj.GenerateResource.cache
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.csproj.CoreCompileInputs.cache
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.csproj.CopyComplete
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.exe
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.pdb
+C:\Users\Phuc Khang\Downloads\blog - Copy\blog\Blog\obj\Debug\Blog.Component.LikeNotice.resources

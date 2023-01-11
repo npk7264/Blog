@@ -255,7 +255,7 @@ namespace Blog.Component
 
             if (count == "0")
             {
-                string sql = "insert into YEUTHICH values (N'" + ID_BaiViet + "', N'" + Login.login_username + "')";
+                string sql = "insert into YEUTHICH values (N'" + ID_BaiViet + "', N'" + Login.login_username + "', '" + DateTime.Now + "')";
                 Functions.RunSQL(sql);
                 pbLike.BackgroundImage = Image.FromFile("picture/icon-liked.png");
             }

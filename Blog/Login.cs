@@ -27,10 +27,13 @@ namespace Blog
             string username = txbTenDangNhap.Texts;
             string password = txbMatKhau.Texts;
             string check_user = Functions.GetFieldValues("select COUNT(*) from TAIKHOAN where TenDangNhap = N'" + username + "' and MatKhau = N'" + password + "'");
-            
+
             if (check_user != "0")
             {
                 login_username = txbTenDangNhap.Texts;
+                Functions.RunSQL("update TAIKHOAN set Onl = N'True' where TenDangNhap = N'" + Login.login_username + "'");
+                Functions.RunSQL("update TAIKHOAN set ThoiGianLogout = '" + DateTime.Now.ToString() + "' where TenDangNhap = N'" + Login.login_username + "'");
+
                 Main frm = new Main();
                 frm.ShowDialog();
 
@@ -40,6 +43,7 @@ namespace Blog
                 txbMatKhau.Texts = "Mật khẩu";
                 txbMatKhau.ForeColor = Color.Gray;
                 txbMatKhau.PasswordChar = false;
+                Functions.RunSQL("update TAIKHOAN set Onl = N'False' where TenDangNhap = N'" + Login.login_username + "'");
             }
             else
                 MessageBox.Show("Vui lòng nhập đúng tên tài khoản và mật khẩu!");
@@ -91,26 +95,8 @@ namespace Blog
 
         private void lbQuenMatKhau_Click(object sender, EventArgs e)
         {
-            string username = Functions.GetFieldValues("select COUNT(TenDangNhap) from TAIKHOAN where TenDangNhap = N'"+txbTenDangNhap.Texts+"'");
-            if (username == "0")
-            {
-                MessageBox.Show("Tên đăng nhập này chưa được đăng ký!");
-                return;
-            }
-
-            string SendToGmail = Functions.GetFieldValues("select DiaChiGmail from TAIKHOAN where TenDangNhap = N'" + txbTenDangNhap.Texts + "'");
-            MessageBox.Show(SendToGmail);
-            MailMessage mailMessage = new MailMessage("gnahkgnahknp@gmail.com", SendToGmail);
-            mailMessage.Subject = "Your password";
-            mailMessage.Body = Functions.GetFieldValues("select MatKhau from TAIKHOAN where TenDangNhap = N'" + txbTenDangNhap.Texts + "'");
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            System.Net.NetworkCredential nc = new System.Net.NetworkCredential("gnahkgnahknp@gmail.com", "xbysomintgcxrexg");
-            smtp.Credentials = nc;
-            smtp.EnableSsl = true;
-            smtp.Send(mailMessage);
-            MessageBox.Show("Đã gửi mật khẩu về gmail của bạn!");
+            QuenPW frm = new QuenPW();
+            frm.ShowDialog();
         }
     }
 }

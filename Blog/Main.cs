@@ -51,9 +51,23 @@ namespace Blog
             {
                 FriendChat friendChat = new FriendChat();
                 friendChat.Username = user;
-                fLP_friend.Controls.Add(friendChat);
+                flowLayoutPanel1.Controls.Add(friendChat);
             }
 
+
+            //Thong bao
+            pbNotice.BackgroundImage = Image.FromFile("picture/noticeon.png");
+
+            //
+            pictureBox1.BackgroundImage = Image.FromFile("picture/4.png");
+            pictureBox2.BackgroundImage = Image.FromFile("picture/5.png");
+            pictureBox3.BackgroundImage = Image.FromFile("picture/6.png");
+            pictureBox4.BackgroundImage = Image.FromFile("picture/7.png");
+            pictureBox5.BackgroundImage = Image.FromFile("picture/8.png");
+
+            //
+
+            ChangeImg();
         }
 
         //private void pbAvatarLogin_Click(object sender, EventArgs e)
@@ -66,6 +80,19 @@ namespace Blog
         //    profile.Show();
         //}
 
+        async void ChangeImg()
+        {
+            pictureBox6.BackgroundImage = Image.FromFile("quangcao/1.jpg");
+            for (int i = 0; i < 100; ++i)
+            {
+                for (int j = 0; j < 5; ++j)
+                {
+                    await Task.Delay(2000);
+                    pictureBox6.BackgroundImage = Image.FromFile("quangcao/" + (j + 1).ToString() + ".jpg");
+                }
+            }
+        }
+
         private void pic_home_Click(object sender, EventArgs e)
         {
             pic_home.Image = Resources.icon_homeClick;
@@ -74,6 +101,33 @@ namespace Blog
             Main.pnMainParent.Controls.Clear();
             pnMain.Controls.Add(home);
             home.Show();
+
+            //load friendChat
+            flowLayoutPanel1.Controls.Clear();
+            List<string> ListFriend1 = Functions.GetFieldValuesList("select User2 from BANBE " +
+                "where User1 = N'" + Login.login_username + "' and IsFriend = N'True'");
+            List<string> ListFriend2 = Functions.GetFieldValuesList("select User1 from BANBE " +
+                "where User2 = N'" + Login.login_username + "' and IsFriend = N'True'");
+            List<string> ListFriend = ListFriend1.Concat(ListFriend2).ToList();
+            foreach (string user in ListFriend)
+            {
+                FriendChat friendChat = new FriendChat();
+                friendChat.Username = user;
+                flowLayoutPanel1.Controls.Add(friendChat);
+            }
+
+            //thong bao
+            string timelogout = Functions.GetFieldValues("select ThoiGianLogout from TAIKHOAN where TenDangNhap = N'" + Login.login_username + "'");
+            string count = Functions.GetFieldValues("select COUNT(ID_BaiViet) from BAIVIET where ThoiGianDang >= '" + timelogout + "'");
+            // 
+            List<string> baiviet = Functions.GetFieldValuesList("select BAIVIET.ID_BaiViet from BAIVIET, YEUTHICH where " +
+                    "TenDangNhap = N'" + Login.login_username + "' and ThoiGianLike >= '" + timelogout + "'");
+            string countlike = baiviet.Count.ToString();
+
+            if (count == "0" && countlike == "0")
+                pbNotice.BackgroundImage = Image.FromFile("picture/noticeon.png");
+            else
+                pbNotice.BackgroundImage = Image.FromFile("picture/noticeoff.png");
         }
 
         private void pic_profile_Click(object sender, EventArgs e)
@@ -192,6 +246,14 @@ namespace Blog
             Main.pnMainParent.Controls.Clear();
             Main.pnMainParent.Controls.Add(inviteList);
             inviteList.Show();
+        }
+
+        private void pbNotice_Click(object sender, EventArgs e)
+        {
+            pbNotice.BackgroundImage = Image.FromFile("picture/noticeon.png");
+
+            ThongBao frm = new ThongBao();
+            frm.ShowDialog();
         }
     }
 }

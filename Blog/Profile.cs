@@ -97,5 +97,11 @@ namespace Blog
             ListFriend frm = new ListFriend();
             frm.ShowDialog();
         }
+
+        private void pbMatKhau_Click(object sender, EventArgs e)
+        {
+            SetPW frm = new SetPW();
+            frm.ShowDialog();
+        }
     }
 }

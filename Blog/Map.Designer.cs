@@ -52,7 +52,6 @@ namespace Blog
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -73,9 +72,8 @@ namespace Blog
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.webBrowser1);
-            this.splitContainer1.Size = new System.Drawing.Size(1096, 751);
-            this.splitContainer1.SplitterDistance = 157;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(822, 610);
+            this.splitContainer1.SplitterDistance = 127;
             this.splitContainer1.TabIndex = 1;
             // 
             // bt_save
@@ -86,10 +84,9 @@ namespace Blog
             this.bt_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save.ForeColor = System.Drawing.Color.White;
-            this.bt_save.Location = new System.Drawing.Point(927, 13);
-            this.bt_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_save.Location = new System.Drawing.Point(695, 11);
             this.bt_save.Name = "bt_save";
-            this.bt_save.Size = new System.Drawing.Size(156, 71);
+            this.bt_save.Size = new System.Drawing.Size(117, 58);
             this.bt_save.TabIndex = 11;
             this.bt_save.TabStop = false;
             this.bt_save.Text = "Checkin";
@@ -100,10 +97,9 @@ namespace Blog
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(132, 112);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Location = new System.Drawing.Point(99, 91);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(277, 29);
+            this.checkBox1.Size = new System.Drawing.Size(225, 24);
             this.checkBox1.TabIndex = 10;
             this.checkBox1.TabStop = false;
             this.checkBox1.Text = "Sử dụng định vị bằng tọa độ";
@@ -113,30 +109,27 @@ namespace Blog
             // name_Location
             // 
             this.name_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_Location.Location = new System.Drawing.Point(132, 13);
-            this.name_Location.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.name_Location.Location = new System.Drawing.Point(99, 11);
             this.name_Location.Name = "name_Location";
-            this.name_Location.Size = new System.Drawing.Size(160, 30);
+            this.name_Location.Size = new System.Drawing.Size(121, 26);
             this.name_Location.TabIndex = 9;
             this.name_Location.TabStop = false;
             // 
             // lon
             // 
             this.lon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lon.Location = new System.Drawing.Point(490, 54);
-            this.lon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lon.Location = new System.Drawing.Point(368, 44);
             this.lon.Name = "lon";
-            this.lon.Size = new System.Drawing.Size(132, 30);
+            this.lon.Size = new System.Drawing.Size(100, 26);
             this.lon.TabIndex = 8;
             this.lon.TabStop = false;
             // 
             // lat
             // 
             this.lat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lat.Location = new System.Drawing.Point(490, 16);
-            this.lat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lat.Location = new System.Drawing.Point(368, 13);
             this.lat.Name = "lat";
-            this.lat.Size = new System.Drawing.Size(132, 30);
+            this.lat.Size = new System.Drawing.Size(100, 26);
             this.lat.TabIndex = 7;
             this.lat.TabStop = false;
             // 
@@ -144,10 +137,9 @@ namespace Blog
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(397, 59);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(298, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 25);
+            this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Kinh độ:";
             // 
@@ -155,10 +147,9 @@ namespace Blog
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(397, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(298, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 25);
+            this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Vĩ độ:";
             // 
@@ -172,10 +163,9 @@ namespace Blog
             "Hybrid",
             "Terrain",
             "GoogleEarth"});
-            this.map_type.Location = new System.Drawing.Point(132, 51);
-            this.map_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.map_type.Location = new System.Drawing.Point(99, 41);
             this.map_type.Name = "map_type";
-            this.map_type.Size = new System.Drawing.Size(160, 33);
+            this.map_type.Size = new System.Drawing.Size(121, 28);
             this.map_type.TabIndex = 4;
             this.map_type.TabStop = false;
             // 
@@ -183,10 +173,9 @@ namespace Blog
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(13, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
+            this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Map Type:";
             // 
@@ -194,10 +183,9 @@ namespace Blog
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Địa chỉ";
             // 
@@ -209,10 +197,9 @@ namespace Blog
             this.show_map.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_map.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_map.ForeColor = System.Drawing.Color.White;
-            this.show_map.Location = new System.Drawing.Point(690, 13);
-            this.show_map.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.show_map.Location = new System.Drawing.Point(518, 11);
             this.show_map.Name = "show_map";
-            this.show_map.Size = new System.Drawing.Size(196, 71);
+            this.show_map.Size = new System.Drawing.Size(147, 58);
             this.show_map.TabIndex = 0;
             this.show_map.TabStop = false;
             this.show_map.Text = "Hiển thị bản đồ";
@@ -223,23 +210,20 @@ namespace Blog
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(27, 25);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(1096, 589);
+            this.webBrowser1.Size = new System.Drawing.Size(822, 479);
             this.webBrowser1.TabIndex = 0;
             // 
             // Map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 751);
+            this.ClientSize = new System.Drawing.Size(822, 610);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Map";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Map";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

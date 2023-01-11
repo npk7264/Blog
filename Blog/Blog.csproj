@@ -110,6 +110,18 @@
     <Compile Include="Component\ImgInGallery.Designer.cs">
       <DependentUpon>ImgInGallery.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\LikeNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\LikeNotice.Designer.cs">
+      <DependentUpon>LikeNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Notice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Notice.Designer.cs">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\Post.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,11 +227,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenPW.Designer.cs">
+      <DependentUpon>QuenPW.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPW.Designer.cs">
+      <DependentUpon>SetPW.cs</DependentUpon>
     </Compile>
     <Compile Include="ShowMap.cs">
       <SubType>Form</SubType>
@@ -232,6 +256,12 @@
     </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongBao.Designer.cs">
+      <DependentUpon>ThongBao.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Chat\Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
@@ -253,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\ImgInGallery.resx">
       <DependentUpon>ImgInGallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\LikeNotice.resx">
+      <DependentUpon>LikeNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Notice.resx">
+      <DependentUpon>Notice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Post.resx">
       <DependentUpon>Post.cs</DependentUpon>
@@ -315,14 +351,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuenPW.resx">
+      <DependentUpon>QuenPW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPW.resx">
+      <DependentUpon>SetPW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowMap.resx">
       <DependentUpon>ShowMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBao.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -416,6 +461,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\picture\listfriend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\picture\password.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

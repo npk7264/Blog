@@ -28,7 +28,7 @@ namespace Blog
                     "N'" + txbTenDangNhap.Texts +
                     "', N'" + txbMatKhau.Texts +
                     "', N'" + txbHo.Texts + " " + txbTen.Texts +
-                    "', N'default.jpg', N'" + txbCongViec.Texts + "')";
+                    "', N'default.jpg', N'" + txbCongViec.Texts + "', N'" + txtGmail.Texts + "', N'False', '" + DateTime.Now.ToString() + "')";
                 Functions.RunSQL(sql);
                 MessageBox.Show("Đăng ký tài khoản thành công");
                 this.Close();
@@ -134,6 +134,24 @@ namespace Blog
             {
                 txbCongViec.Texts = "Công việc";
                 txbCongViec.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtGmail_Enter(object sender, EventArgs e)
+        {
+            if (txtGmail.Texts == "Gmail")
+            {
+                txtGmail.Texts = "";
+                txtGmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtGmail_Leave(object sender, EventArgs e)
+        {
+            if (txtGmail.Texts == "")
+            {
+                txtGmail.Texts = "Gmail";
+                txtGmail.ForeColor = Color.Gray;
             }
         }
     }

@@ -22,19 +22,18 @@ namespace Blog
         {
             string nowDay = DateTime.Now.Day.ToString();
             string nowMonth = DateTime.Now.Month.ToString();
+            string nowYear = DateTime.Now.Year.ToString();
 
             List<string> ListBaiViet = Functions.GetFieldValuesList("select ID_BaiViet from BAIVIET where " +
-                "DAY(ThoiGianDang) = '" + nowDay + "' and MONTH(ThoiGianDang) = '" + nowMonth + "' " +
+                "DAY(ThoiGianDang) = '" + nowDay + "' and MONTH(ThoiGianDang) = '" + nowMonth + "' and YEAR(ThoiGianDang) < '" + nowYear + "' " +
+                "and TenDangNhap = N'" + Login.login_username + "' " +
                 "order by ThoiGianDang desc");
 
             foreach (string baiviet in ListBaiViet)
             {
-                string state = Functions.GetFieldValues("select CongKhai from BAIVIET where ID_BaiViet = N'" + baiviet + "'");
-                string user_dangbai = Functions.GetFieldValues("select TenDangNhap from BAIVIET where ID_BaiViet = N'" + baiviet + "'");
-
                 Post post = new Post();
                 // 2 thuộc tính khóa của bài viết là tên đăng nhập và thời gian đăng bài
-                post.Username = user_dangbai; // user đăng bài
+                post.Username = Login.login_username; // user đăng bài
                 post.Time = Functions.GetFieldValues("select ThoiGianDang from BAIVIET where ID_BaiViet = N'" + baiviet + "'");
 
                 flowLayoutPanel1.Controls.Add(post);
