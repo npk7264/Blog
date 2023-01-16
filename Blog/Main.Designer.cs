@@ -295,7 +295,7 @@
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(19, 228);
+            this.pictureBox5.Location = new System.Drawing.Point(19, 174);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(41, 41);
             this.pictureBox5.TabIndex = 9;
@@ -305,7 +305,7 @@
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(19, 174);
+            this.pictureBox4.Location = new System.Drawing.Point(19, 228);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 41);
             this.pictureBox4.TabIndex = 8;
@@ -481,9 +481,9 @@
             this.lb_friend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_friend.Location = new System.Drawing.Point(3, 26);
             this.lb_friend.Name = "lb_friend";
-            this.lb_friend.Size = new System.Drawing.Size(66, 20);
+            this.lb_friend.Size = new System.Drawing.Size(97, 20);
             this.lb_friend.TabIndex = 0;
-            this.lb_friend.Text = "Bạn bè";
+            this.lb_friend.Text = "Trò chuyện";
             // 
             // panel5
             // 
@@ -518,11 +518,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
